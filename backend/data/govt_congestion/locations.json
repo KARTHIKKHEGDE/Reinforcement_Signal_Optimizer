@@ -1,0 +1,44 @@
+{
+    "silk_board": {
+        "name": "Silk Board Junction",
+        "description": "Tech hub gateway, extreme peak congestion.",
+        "real_world_stats": {
+            "avg_wait_time": 480,
+            "avg_queue_length": 120,
+            "vehicle_flow_per_hour": 12000
+        },
+        "simulation_config": {
+            "traffic_scale": 2.0,
+            "arrival_rate": 0.8,
+            "green_window": 30
+        }
+    },
+    "tin_factory": {
+        "name": "Tin Factory (KR Puram)",
+        "description": "Major bottleneck for ITPL and airport traffic.",
+        "real_world_stats": {
+            "avg_wait_time": 360,
+            "avg_queue_length": 95,
+            "vehicle_flow_per_hour": 9500
+        },
+        "simulation_config": {
+            "traffic_scale": 1.5,
+            "arrival_rate": 0.6,
+            "green_window": 40
+        }
+    },
+    "hebbal": {
+        "name": "Hebbal Flyover Area",
+        "description": "High speed convergence point, heavy volume.",
+        "real_world_stats": {
+            "avg_wait_time": 240,
+            "avg_queue_length": 70,
+            "vehicle_flow_per_hour": 15000
+        },
+        "simulation_config": {
+            "traffic_scale": 1.2,
+            "arrival_rate": 0.5,
+            "green_window": 45
+        }
+    }
+}

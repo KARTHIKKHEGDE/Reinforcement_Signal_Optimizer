@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Simple vehicle type definitions for Bangalore traffic -->
-<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
-    <!-- Vehicle Types -->
-    <vType id="car" accel="2.6" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="55.56" color="yellow"/>
-    <vType id="bus" accel="1.5" decel="3.5" sigma="0.3" length="12.0" maxSpeed="44.44" color="yellow"/>
-    <vType id="emergency" accel="3.0" decel="5.0" sigma="0.2" length="7.0" maxSpeed="69.44" color="red"/>
-</routes>

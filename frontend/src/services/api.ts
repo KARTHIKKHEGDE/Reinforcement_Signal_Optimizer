@@ -17,6 +17,7 @@ export interface SimulationRequest {
     mode: 'fixed' | 'rl';
     use_gui: boolean;
     traffic_scenario?: 'peak' | 'offpeak';
+    location?: string;
 }
 
 export interface SimulationResponse {
@@ -24,7 +25,21 @@ export interface SimulationResponse {
     message: string;
     mode?: string;
     traffic_scenario?: string;
+    location?: string;
 }
+
+export interface LocationConfig {
+    name: string;
+    description: string;
+    real_world_stats: {
+        avg_wait_time: number;
+        avg_queue_length: number;
+        vehicle_flow_per_hour: number;
+    };
+    simulation_config: any;
+}
+
+export type LocationsMap = Record<string, LocationConfig>;
 
 export interface SimulationStatus {
     running: boolean;
@@ -50,17 +65,27 @@ export interface MetricsSummary {
 }
 
 /**
+ * Get available locations
+ */
+export const getLocations = async (): Promise<LocationsMap> => {
+    const response = await apiClient.get<LocationsMap>('/api/simulation/locations');
+    return response.data;
+};
+
+/**
  * Start simulation
  */
 export const startSimulation = async (
     mode: 'fixed' | 'rl',
     useGui: boolean = true,
-    trafficScenario: 'peak' | 'offpeak' = 'peak'
+    trafficScenario: 'peak' | 'offpeak' = 'peak',
+    location: string = 'silk_board'
 ): Promise<SimulationResponse> => {
     const response = await apiClient.post<SimulationResponse>('/api/simulation/start', {
         mode,
         use_gui: useGui,
         traffic_scenario: trafficScenario,
+        location
     });
     return response.data;
 };

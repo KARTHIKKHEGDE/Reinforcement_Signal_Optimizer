@@ -1,30 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- SUMO Configuration File -->
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
-        <net-file value="network.net.xml"/>
-        <route-files value="routes_peak.rou.xml"/>
-        <gui-settings-file value="gui-settings.xml"/>
+        <net-file value="silk_board.net.xml" />
+        <route-files value="routes_silk_board.rou.xml" />
+        <gui-settings-file value="gui-settings.xml" />
     </input>
 
     <time>
-        <begin value="0"/>
-        <end value="3600"/>
-        <step-length value="1"/>
+        <begin value="0" />
+        <end value="3600" />
+        <step-length value="1" />
     </time>
 
     <processing>
-        <time-to-teleport value="-1"/>
-        <max-depart-delay value="1"/>
-        <routing-algorithm value="dijkstra"/>
+        <time-to-teleport value="-1" />
+        <max-depart-delay value="1" />
+        <routing-algorithm value="dijkstra" />
     </processing>
 
     <report>
-        <verbose value="false"/>
-        <no-step-log value="true"/>
-        <no-warnings value="true"/>
-        <duration-log.disable value="true"/>
+        <verbose value="false" />
+        <no-step-log value="true" />
+        <no-warnings value="true" />
+        <duration-log.disable value="true" />
     </report>
 
 </configuration>
