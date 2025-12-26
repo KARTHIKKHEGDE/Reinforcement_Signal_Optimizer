@@ -1,0 +1,101 @@
+{
+  "metrics_history": [
+    {
+      "timestamp": 0,
+      "total_vehicles": 1,
+      "average_speed": 0.0,
+      "congested_intersections": [],
+      "emergency_events": 0,
+      "throughput": 0,
+      "co2_emissions": 2624.722222222222
+    }
+  ],
+  "performance_log": [
+    {
+      "step": 0,
+      "simulation_time": 1748172289.48723,
+      "total_vehicles": 1,
+      "active_tls": 13
+    }
+  ],
+  "final_states": {
+    "11856705124": {
+      "current_phase": 0,
+      "average_waiting_time": 0,
+      "throughput": 0,
+      "emergency_events": false
+    },
+    "11857026800": {
+      "current_phase": 0,
+      "average_waiting_time": 0,
+      "throughput": 0,
+      "emergency_events": false
+    },
+    "11857026801": {
+      "current_phase": 0,
+      "average_waiting_time": 0,
+      "throughput": 0,
+      "emergency_events": false
+    },
+    "12088405374": {
+      "current_phase": 0,
+      "average_waiting_time": 0,
+      "throughput": 0,
+      "emergency_events": false
+    },
+    "12088405376": {
+      "current_phase": 0,
+      "average_waiting_time": 0,
+      "throughput": 0,
+      "emergency_events": false
+    },
+    "12139153727": {
+      "current_phase": 0,
+      "average_waiting_time": 0,
+      "throughput": 0,
+      "emergency_events": false
+    },
+    "12139153728": {
+      "current_phase": 0,
+      "average_waiting_time": 0,
+      "throughput": 0,
+      "emergency_events": false
+    },
+    "12139153743": {
+      "current_phase": 0,
+      "average_waiting_time": 0,
+      "throughput": 0,
+      "emergency_events": false
+    },
+    "1465590369": {
+      "current_phase": 0,
+      "average_waiting_time": 0,
+      "throughput": 0,
+      "emergency_events": false
+    },
+    "1589590957": {
+      "current_phase": 0,
+      "average_waiting_time": 0,
+      "throughput": 0,
+      "emergency_events": false
+    },
+    "249083107": {
+      "current_phase": 0,
+      "average_waiting_time": 0,
+      "throughput": 0,
+      "emergency_events": false
+    },
+    "249083111": {
+      "current_phase": 0,
+      "average_waiting_time": 0,
+      "throughput": 0,
+      "emergency_events": false
+    },
+    "412135152": {
+      "current_phase": 0,
+      "average_waiting_time": 0,
+      "throughput": 0,
+      "emergency_events": false
+    }
+  }
+}

@@ -15,14 +15,16 @@ router = APIRouter(prefix="/api/simulation", tags=["simulation"])
 
 
 class SimulationRequest(BaseModel):
-    mode: Literal["fixed", "rl"]
+    mode: Literal["fixed", "rl"] = "fixed"
     use_gui: bool = True
+    traffic_scenario: Literal["peak", "offpeak"] = "peak"
 
 
 class SimulationResponse(BaseModel):
     status: str
     message: str
     mode: str = None
+    traffic_scenario: str = None
 
 
 @router.post("/start", response_model=SimulationResponse)
@@ -42,27 +44,22 @@ async def start_simulation(request: SimulationRequest):
         if sumo_runner.is_running:
             raise HTTPException(status_code=400, detail="Simulation is already running")
         
-        # Start SUMO process
+        # Start SUMO process (this also initializes TraCI)
         success = sumo_runner.start(use_gui=request.use_gui)
         if not success:
             raise HTTPException(status_code=500, detail="Failed to start SUMO")
         
-        # Wait for SUMO to initialize
-        await asyncio.sleep(2)
-        
-        # Connect TraCI
-        traci_connected = traci_handler.connect()
-        if not traci_connected:
-            sumo_runner.stop()
-            raise HTTPException(status_code=500, detail="Failed to connect to SUMO via TraCI")
+        # Wait for SUMO to fully initialize
+        await asyncio.sleep(1)
         
         # Start broadcasting metrics
         asyncio.create_task(manager.start_broadcasting())
         
         return SimulationResponse(
             status="success",
-            message=f"Simulation started in {request.mode} mode",
-            mode=request.mode
+            message=f"Simulation started in {request.mode} mode with {request.traffic_scenario} traffic",
+            mode=request.mode,
+            traffic_scenario=request.traffic_scenario
         )
         
     except HTTPException:

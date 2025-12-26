@@ -1,0 +1,1056 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.61.8 b1080abd">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2025-12-26T16:31:21Z"/>
+
+  <bounds minlat="12.9145000" minlon="77.6200000" maxlat="12.9190000" maxlon="77.6246000"/>
+
+  <node id="247989228" lat="12.9163685" lon="77.6192664"/>
+  <node id="247989232" lat="12.9176822" lon="77.6243834"/>
+  <node id="306593854" lat="12.9147868" lon="77.6240948"/>
+  <node id="306594280" lat="12.9172507" lon="77.6224563">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="307407783" lat="12.9165508" lon="77.6201826"/>
+  <node id="494271023" lat="12.9169759" lon="77.6216695"/>
+  <node id="494271061" lat="12.9135919" lon="77.6248109"/>
+  <node id="494271066" lat="12.9176164" lon="77.6249271"/>
+  <node id="494271067" lat="12.9176224" lon="77.6251311"/>
+  <node id="494271069" lat="12.9150658" lon="77.6239418"/>
+  <node id="494271073" lat="12.9140741" lon="77.6246589"/>
+  <node id="494271075" lat="12.9192766" lon="77.6214862"/>
+  <node id="494271080" lat="12.9173081" lon="77.6231104">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="494271091" lat="12.9163133" lon="77.6199358"/>
+  <node id="494271095" lat="12.9163543" lon="77.6187185"/>
+  <node id="494271113" lat="12.9175781" lon="77.6257560"/>
+  <node id="494271114" lat="12.9175253" lon="77.6259953"/>
+  <node id="494271115" lat="12.9167498" lon="77.6285856"/>
+  <node id="494271117" lat="12.9167297" lon="77.6287887"/>
+  <node id="650141295" lat="12.9166561" lon="77.6299413"/>
+  <node id="1123386062" lat="12.9169283" lon="77.6219684"/>
+  <node id="1123386070" lat="12.9167603" lon="77.6228902"/>
+  <node id="1472248429" lat="12.9193784" lon="77.6212875"/>
+  <node id="1613147976" lat="12.9186160" lon="77.6218568"/>
+  <node id="1613147978" lat="12.9186638" lon="77.6219355"/>
+  <node id="1617747730" lat="12.9147233" lon="77.6239622"/>
+  <node id="1617747736" lat="12.9142964" lon="77.6243627"/>
+  <node id="1723790725" lat="12.9171705" lon="77.6222334"/>
+  <node id="1723795924" lat="12.9172126" lon="77.6226574"/>
+  <node id="1723795929" lat="12.9175615" lon="77.6236280"/>
+  <node id="1723812913" lat="12.9171404" lon="77.6228925"/>
+  <node id="1723812971" lat="12.9176200" lon="77.6224757"/>
+  <node id="1723813002" lat="12.9171082" lon="77.6227896"/>
+  <node id="1723840726" lat="12.9180437" lon="77.6223393"/>
+  <node id="2453736858" lat="12.9165405" lon="77.6317612"/>
+  <node id="2472135134" lat="12.9189684" lon="77.6215952"/>
+  <node id="2472135139" lat="12.9151188" lon="77.6240446"/>
+  <node id="2509423121" lat="12.9165505" lon="77.6229543"/>
+  <node id="2509423122" lat="12.9160684" lon="77.6231905"/>
+  <node id="2509428534" lat="12.9168542" lon="77.6212842">
+    <tag k="bus" v="yes"/>
+    <tag k="public_transport" v="stop_position"/>
+  </node>
+  <node id="2510395005" lat="12.9163194" lon="77.6166903"/>
+  <node id="2619300318" lat="12.9167749" lon="77.6210334"/>
+  <node id="2619300330" lat="12.9166941" lon="77.6292164"/>
+  <node id="2971089259" lat="12.9171967" lon="77.6227353"/>
+  <node id="3740373536" lat="12.9163778" lon="77.6230294"/>
+  <node id="3804880020" lat="12.9174761" lon="77.6238988"/>
+  <node id="3804880021" lat="12.9176182" lon="77.6253351"/>
+  <node id="3804880023" lat="12.9166138" lon="77.6309395"/>
+  <node id="3804880025" lat="12.9176102" lon="77.6255550"/>
+  <node id="3804880026" lat="12.9175524" lon="77.6244169"/>
+  <node id="3804880033" lat="12.9168049" lon="77.6283794"/>
+  <node id="3804880035" lat="12.9176109" lon="77.6247091"/>
+  <node id="3805003786" lat="12.9168664" lon="77.6228536"/>
+  <node id="3805003787" lat="12.9171577" lon="77.6228631"/>
+  <node id="3805003788" lat="12.9170482" lon="77.6228392"/>
+  <node id="3805003789" lat="12.9169462" lon="77.6228375">
+    <tag k="highway" v="traffic_signals"/>
+    <tag k="traffic_signals" v="signal"/>
+  </node>
+  <node id="3805003790" lat="12.9173954" lon="77.6229259"/>
+  <node id="4105324822" lat="12.9172887" lon="77.6229515"/>
+  <node id="5067333236" lat="12.9181046" lon="77.6227173"/>
+  <node id="5067333237" lat="12.9176988" lon="77.6229179"/>
+  <node id="5067333239" lat="12.9185042" lon="77.6225295"/>
+  <node id="5067333240" lat="12.9190028" lon="77.6221800"/>
+  <node id="5067333241" lat="12.9190668" lon="77.6220452">
+    <tag k="traffic_calming" v="rumble_strip"/>
+  </node>
+  <node id="5067333242" lat="12.9191001" lon="77.6218761"/>
+  <node id="5067333243" lat="12.9190728" lon="77.6216997"/>
+  <node id="5067333244" lat="12.9190240" lon="77.6216117"/>
+  <node id="5067333245" lat="12.9189401" lon="77.6215249"/>
+  <node id="5067333246" lat="12.9188326" lon="77.6214463"/>
+  <node id="6182653341" lat="12.9163182" lon="77.6170671"/>
+  <node id="6497456137" lat="12.9177084" lon="77.6247366"/>
+  <node id="6518859300" lat="12.9163528" lon="77.6163047"/>
+  <node id="7232644749" lat="12.9152415" lon="77.6236515"/>
+  <node id="7294283056" lat="12.9175581" lon="77.6244453">
+    <tag k="bus" v="yes"/>
+    <tag k="name" v="Central Silk Board"/>
+    <tag k="name:en" v="Central Silk Board"/>
+    <tag k="name:kn" v="ಕೇಂದ್ರಿಯ ರೇಷ್ಮೆ ಇಲಾಖೆ"/>
+    <tag k="network" v="BMTC"/>
+    <tag k="operator" v="BMTC"/>
+    <tag k="public_transport" v="stop_position"/>
+  </node>
+  <node id="8239896807" lat="12.9163982" lon="77.6197489"/>
+  <node id="8239896808" lat="12.9163764" lon="77.6195336">
+    <tag k="traffic_calming" v="rumble_strip"/>
+  </node>
+  <node id="8239896810" lat="12.9163443" lon="77.6193191"/>
+  <node id="8239896811" lat="12.9163339" lon="77.6189793">
+    <tag k="traffic_calming" v="rumble_strip"/>
+  </node>
+  <node id="8239896812" lat="12.9163121" lon="77.6175646"/>
+  <node id="8239896813" lat="12.9162816" lon="77.6171045"/>
+  <node id="8239896814" lat="12.9162711" lon="77.6166660"/>
+  <node id="8239896815" lat="12.9164012" lon="77.6155799"/>
+  <node id="8239896816" lat="12.9164387" lon="77.6150652"/>
+  <node id="8239947017" lat="12.9164926" lon="77.6142033"/>
+  <node id="8239947018" lat="12.9165024" lon="77.6139489"/>
+  <node id="8239947019" lat="12.9165901" lon="77.6106789"/>
+  <node id="8239947020" lat="12.9166269" lon="77.6087690"/>
+  <node id="8239947021" lat="12.9166490" lon="77.6068966"/>
+  <node id="8239947022" lat="12.9167301" lon="77.6046272"/>
+  <node id="8239947023" lat="12.9167565" lon="77.6018886"/>
+  <node id="8239947085" lat="12.9166985" lon="77.6055093"/>
+  <node id="8239947088" lat="12.9165832" lon="77.6118255"/>
+  <node id="8239947094" lat="12.9163313" lon="77.6161169"/>
+  <node id="8239947095" lat="12.9163509" lon="77.6175426"/>
+  <node id="8243174052" lat="12.9130260" lon="77.6251583"/>
+  <node id="9797838896" lat="12.9114595" lon="77.6261198"/>
+  <node id="10081538827" lat="12.9167765" lon="77.6215184"/>
+  <node id="10097182475" lat="12.9169193" lon="77.6214901"/>
+  <node id="10153960137" lat="12.9173496" lon="77.6233051"/>
+  <node id="10282796509" lat="12.9173744" lon="77.6228281"/>
+  <node id="10282796511" lat="12.9173014" lon="77.6225966"/>
+  <node id="10855370147" lat="12.9172563" lon="77.6228033"/>
+  <node id="10872824023" lat="12.9170799" lon="77.6223011">
+    <tag k="bus" v="yes"/>
+    <tag k="name" v="Silk Board"/>
+    <tag k="name:en" v="Silk Board"/>
+    <tag k="network" v="BMTC"/>
+    <tag k="operator" v="BMTC"/>
+    <tag k="public_transport" v="stop_position"/>
+  </node>
+  <node id="11374929988" lat="12.9175302" lon="77.6242664"/>
+  <node id="11374930008" lat="12.9164911" lon="77.6322917"/>
+  <node id="11664293092" lat="12.9163879" lon="77.6234745"/>
+  <node id="11664293093" lat="12.9159263" lon="77.6237162"/>
+  <node id="11664293094" lat="12.9153976" lon="77.6240067"/>
+  <node id="11664293095" lat="12.9148464" lon="77.6243203"/>
+  <node id="11664293096" lat="12.9145188" lon="77.6243915"/>
+  <node id="11726543776" lat="12.9188884" lon="77.6222926">
+    <tag k="traffic_calming" v="rumble_strip"/>
+  </node>
+  <node id="11726543777" lat="12.9187445" lon="77.6223980">
+    <tag k="traffic_calming" v="rumble_strip"/>
+  </node>
+  <node id="11726718192" lat="12.9182590" lon="77.6214176"/>
+  <node id="11964440714" lat="12.9148111" lon="77.6242258">
+    <tag k="traffic_calming" v="rumble_strip"/>
+  </node>
+  <node id="11964440729" lat="12.9161431" lon="77.6233472"/>
+  <node id="11964440731" lat="12.9185930" lon="77.6219816">
+    <tag k="maxspeed" v="40"/>
+    <tag k="traffic_sign" v="maxspeed"/>
+    <tag k="traffic_sign:direction" v="forward"/>
+  </node>
+  <node id="12040966305" lat="12.9168819" lon="77.6233245"/>
+  <node id="12040966309" lat="12.9181096" lon="77.6214024">
+    <tag k="traffic_calming" v="rumble_strip"/>
+  </node>
+  <node id="12040966310" lat="12.9187690" lon="77.6214199"/>
+  <node id="12040966311" lat="12.9177134" lon="77.6212072">
+    <tag k="traffic_calming" v="rumble_strip"/>
+  </node>
+  <node id="12040966313" lat="12.9172765" lon="77.6208749"/>
+  <node id="12040966317" lat="12.9168316" lon="77.6204767"/>
+  <node id="12040966319" lat="12.9167374" lon="77.6204110">
+    <tag k="traffic_calming" v="rumble_strip"/>
+  </node>
+  <node id="12040966320" lat="12.9165539" lon="77.6202964"/>
+  <node id="12040966321" lat="12.9176181" lon="77.6211381"/>
+  <node id="12040966322" lat="12.9170095" lon="77.6206199">
+    <tag k="traffic_calming" v="rumble_strip"/>
+  </node>
+  <node id="12040966323" lat="12.9164729" lon="77.6200533"/>
+  <node id="12057714071" lat="12.9149255" lon="77.6242747"/>
+  <node id="12068001056" lat="12.9169900" lon="77.6228348"/>
+  <node id="12068001057" lat="12.9170990" lon="77.6228463"/>
+  <node id="12068001058" lat="12.9172150" lon="77.6228991"/>
+  <node id="12068001060" lat="12.9172485" lon="77.6229219"/>
+  <node id="12129307874" lat="12.9174042" lon="77.6235614"/>
+  <node id="12164834291" lat="12.9174551" lon="77.6238004"/>
+  <node id="12196449735" lat="12.9163304" lon="77.6230541"/>
+  <node id="12695683918" lat="12.9164670" lon="77.6198819"/>
+  <node id="12695683928" lat="12.9165077" lon="77.6200281"/>
+  <node id="13074467238" lat="12.9167977" lon="77.6211055"/>
+  <node id="13075406631" lat="12.9163890" lon="77.6194449"/>
+  <node id="13075406632" lat="12.9183288" lon="77.6226139">
+    <tag k="traffic_calming" v="rumble_strip"/>
+  </node>
+  <node id="13075406635" lat="12.9179236" lon="77.6213385"/>
+  <node id="13075406636" lat="12.9185249" lon="77.6214203">
+    <tag k="traffic_calming" v="rumble_strip"/>
+  </node>
+  <node id="13075406642" lat="12.9166887" lon="77.6293197">
+    <tag k="traffic_calming" v="hump"/>
+  </node>
+  <node id="13337723222" lat="12.9145950" lon="77.6242019"/>
+  <node id="13337723223" lat="12.9146418" lon="77.6240088"/>
+  <node id="13354702089" lat="12.9165054" lon="77.6201806"/>
+  <node id="13379577436" lat="12.9167707" lon="77.6009818"/>
+  <way id="27555707">
+    <nd ref="10282796511"/>
+    <nd ref="10282796509"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="lanes" v="3"/>
+    <tag k="maxspeed" v="40"/>
+    <tag k="name" v="Outer Ring Road"/>
+    <tag k="name:kn" v="ಹೊರ ವರ್ತುಲ ರಸ್ತೆ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="short_name" v="ORR"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="40696221">
+    <nd ref="1613147978"/>
+    <nd ref="11964440731"/>
+    <nd ref="1723840726"/>
+    <nd ref="1723812913"/>
+    <nd ref="2472135139"/>
+    <tag k="alt_name" v="Hosur Road"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="foot" v="no"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="int_ref" v="AH43"/>
+    <tag k="lanes" v="3"/>
+    <tag k="layer" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="loc_name" v="Hosur Road"/>
+    <tag k="maxspeed" v="40"/>
+    <tag k="maxweight:signed" v="no"/>
+    <tag k="name" v="Silk Board Flyover"/>
+    <tag k="name:kn" v="ಹೊಸೂರು ರಸ್ತೆ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="overtaking" v="no"/>
+    <tag k="ref:old" v="NH7"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="40696222">
+    <nd ref="494271069"/>
+    <nd ref="11964440729"/>
+    <nd ref="1723813002"/>
+    <nd ref="2971089259"/>
+    <nd ref="1723812971"/>
+    <nd ref="1613147976"/>
+    <tag k="alt_name" v="Hosur Road"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="foot" v="no"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="int_ref" v="AH43"/>
+    <tag k="lanes" v="3"/>
+    <tag k="layer" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="loc_name" v="Hosur Road"/>
+    <tag k="maxspeed" v="60"/>
+    <tag k="maxweight:signed" v="no"/>
+    <tag k="name" v="Silk Board Flyover"/>
+    <tag k="name:kn" v="ಹೊಸೂರು ರಸ್ತೆ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="overtaking" v="no"/>
+    <tag k="ref:old" v="NH7"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="237025636">
+    <nd ref="2472135139"/>
+    <nd ref="11964440714"/>
+    <nd ref="11664293096"/>
+    <tag k="foot" v="no"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="int_ref" v="AH43"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="80"/>
+    <tag k="name" v="Hosur Road"/>
+    <tag k="name:etymology:wikidata" v="Q297967"/>
+    <tag k="name:kn" v="ಹೊಸೂರು ರಸ್ತೆ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="ref" v="NH44"/>
+    <tag k="ref:old" v="NH7"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="243897292">
+    <nd ref="306593854"/>
+    <nd ref="494271069"/>
+    <tag k="foot" v="no"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="int_ref" v="AH43"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="80"/>
+    <tag k="name" v="Hosur Road"/>
+    <tag k="name:etymology:wikidata" v="Q297967"/>
+    <tag k="name:kn" v="ಹೊಸೂರು ರಸ್ತೆ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="ref:old" v="NH7"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="312174028">
+    <nd ref="1723795924"/>
+    <nd ref="10872824023"/>
+    <nd ref="1123386062"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="lanes" v="3"/>
+    <tag k="maxspeed" v="40"/>
+    <tag k="name" v="Outer Ring Road"/>
+    <tag k="name:kn" v="ಹೊರ ವರ್ತುಲ ರಸ್ತೆ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="short_name" v="ORR"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="377132617">
+    <nd ref="1617747730"/>
+    <nd ref="7232644749"/>
+    <nd ref="2509423122"/>
+    <nd ref="12196449735"/>
+    <nd ref="3740373536"/>
+    <nd ref="2509423121"/>
+    <tag k="alt_name" v="Delhi - Chennai Highway"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="int_ref" v="AH43"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="80"/>
+    <tag k="name" v="Srinagar - Kanyakumari Highway"/>
+    <tag k="name:kn" v="ಕನ್ಯಾಕುಮಾರಿ - ಶ್ರೀನಗರ ಹೆದ್ದಾರಿ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="ref" v="NH44;NH48"/>
+    <tag k="ref:old" v="NH7"/>
+    <tag k="ref_1" v="NH48"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="380707240">
+    <nd ref="13337723222"/>
+    <nd ref="13337723223"/>
+    <tag k="alt_name" v="Delhi - Chennai Highway"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="int_ref" v="AH43"/>
+    <tag k="lanes" v="2"/>
+    <tag k="maxspeed" v="80"/>
+    <tag k="name" v="Srinagar - Kanyakumari Highway"/>
+    <tag k="name:kn" v="ಕನ್ಯಾಕುಮಾರಿ - ಶ್ರೀನಗರ ಹೆದ್ದಾರಿ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="ref" v="NH44;NH48"/>
+    <tag k="ref:old" v="NH7"/>
+    <tag k="ref_1" v="NH48"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="380709621">
+    <nd ref="10282796509"/>
+    <nd ref="3805003790"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="lanes" v="3"/>
+    <tag k="maxspeed" v="40"/>
+    <tag k="name" v="Outer Ring Road"/>
+    <tag k="name:kn" v="ಹೊರ ವರ್ತುಲ ರಸ್ತೆ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="short_name" v="ORR"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="380980308">
+    <nd ref="11374930008"/>
+    <nd ref="2453736858"/>
+    <nd ref="3804880023"/>
+    <nd ref="650141295"/>
+    <nd ref="13075406642"/>
+    <nd ref="2619300330"/>
+    <nd ref="494271117"/>
+    <nd ref="494271115"/>
+    <nd ref="3804880033"/>
+    <nd ref="494271114"/>
+    <nd ref="494271113"/>
+    <nd ref="3804880025"/>
+    <nd ref="3804880021"/>
+    <nd ref="494271067"/>
+    <nd ref="494271066"/>
+    <nd ref="3804880035"/>
+    <nd ref="7294283056"/>
+    <nd ref="3804880026"/>
+    <nd ref="11374929988"/>
+    <nd ref="3804880020"/>
+    <nd ref="12164834291"/>
+    <nd ref="12129307874"/>
+    <nd ref="10153960137"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="int_ref" v="AH43"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="60"/>
+    <tag k="name" v="Outer Ring Road"/>
+    <tag k="name:kn" v="ಹೊರ ವರ್ತುಲ ರಸ್ತೆ"/>
+    <tag k="official_name" v="KC Reddy Ring Road"/>
+    <tag k="official_name:etymology:wikidata" v="Q6323235"/>
+    <tag k="official_name:kn" v="ಕ್ಚ್ ರೆಡ್ಡಿ ವರ್ತುಲ ರಸ್ತೆನ್ಟ್"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="ref" v="NH44;NH48"/>
+    <tag k="ref:old" v="NH7"/>
+    <tag k="short_name" v="ORR"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="source:official_name" v="https://timesofindia.indiatimes.com/city/bengaluru/kc-reddy-vartula-raste-30km-orr-stretch-named-after-first-mysore-cm/articleshow/107002205.cms"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="464465162">
+    <nd ref="2509428534"/>
+    <nd ref="10097182475"/>
+    <nd ref="494271023"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="lanes" v="3"/>
+    <tag k="maxspeed" v="60"/>
+    <tag k="name" v="Outer Ring Road"/>
+    <tag k="name:kn" v="ಹೊರ ವರ್ತುಲ ರಸ್ತೆ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="short_name" v="ORR"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="464465163">
+    <nd ref="1723790725"/>
+    <nd ref="306594280"/>
+    <nd ref="10282796511"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="lanes" v="3"/>
+    <tag k="maxspeed" v="60"/>
+    <tag k="name" v="Outer Ring Road"/>
+    <tag k="name:kn" v="ಹೊರ ವರ್ತುಲ ರಸ್ತೆ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="short_name" v="ORR"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="491889865">
+    <nd ref="6518859300"/>
+    <nd ref="2510395005"/>
+    <nd ref="6182653341"/>
+    <nd ref="8239947095"/>
+    <nd ref="494271095"/>
+    <nd ref="247989228"/>
+    <nd ref="13075406631"/>
+    <nd ref="12695683918"/>
+    <nd ref="12695683928"/>
+    <nd ref="307407783"/>
+    <nd ref="2619300318"/>
+    <nd ref="13074467238"/>
+    <nd ref="2509428534"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="lanes" v="3"/>
+    <tag k="maxspeed" v="60"/>
+    <tag k="name" v="Outer Ring Road"/>
+    <tag k="name:kn" v="ಹೊರ ವರ್ತುಲ ರಸ್ತೆ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="short_name" v="ORR"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="smoothness" v="intermediate"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="519734960">
+    <nd ref="12040966310"/>
+    <nd ref="5067333246"/>
+    <nd ref="5067333245"/>
+    <nd ref="5067333244"/>
+    <nd ref="5067333243"/>
+    <nd ref="5067333242"/>
+    <nd ref="5067333241"/>
+    <nd ref="5067333240"/>
+    <nd ref="11726543776"/>
+    <nd ref="11726543777"/>
+    <nd ref="5067333239"/>
+    <nd ref="13075406632"/>
+    <nd ref="5067333236"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="check_date" v="2024-07-08"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="layer" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="40"/>
+    <tag k="name" v="Silkboard Double Decker Flyover"/>
+    <tag k="official_name" v="Silk Board Interchange"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="start_date" v="2024-07-17"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="559801783">
+    <nd ref="494271023"/>
+    <nd ref="1723790725"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="lanes" v="3"/>
+    <tag k="maxspeed" v="60"/>
+    <tag k="name" v="Outer Ring Road"/>
+    <tag k="name:kn" v="ಹೊರ ವರ್ತುಲ ರಸ್ತೆ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="short_name" v="ORR"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="610101763">
+    <nd ref="4105324822"/>
+    <nd ref="10855370147"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="lanes" v="3"/>
+    <tag k="maxspeed" v="40"/>
+    <tag k="name" v="Outer Ring Road"/>
+    <tag k="name:kn" v="ಹೊರ ವರ್ತುಲ ರಸ್ತೆ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="short_name" v="ORR"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="654137560">
+    <nd ref="1723795924"/>
+    <nd ref="10282796511"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="886153772">
+    <nd ref="13379577436"/>
+    <nd ref="8239947023"/>
+    <nd ref="8239947022"/>
+    <nd ref="8239947085"/>
+    <nd ref="8239947021"/>
+    <nd ref="8239947020"/>
+    <nd ref="8239947019"/>
+    <nd ref="8239947088"/>
+    <nd ref="8239947018"/>
+    <nd ref="8239947017"/>
+    <nd ref="8239896816"/>
+    <nd ref="8239896815"/>
+    <nd ref="8239947094"/>
+    <nd ref="8239896814"/>
+    <nd ref="8239896813"/>
+    <nd ref="8239896812"/>
+    <nd ref="8239896811"/>
+    <nd ref="8239896810"/>
+    <nd ref="8239896808"/>
+    <nd ref="8239896807"/>
+    <nd ref="12040966323"/>
+    <tag k="bridge" v="viaduct"/>
+    <tag k="check_date" v="2024-07-08"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="layer" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxheight" v="4.5"/>
+    <tag k="maxspeed" v="40"/>
+    <tag k="name" v="Ragigudda-Silk Board Integrated Flyover"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:maxspeed" v="sign"/>
+    <tag k="start_date" v="2024-07-17"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1073384217">
+    <nd ref="3805003790"/>
+    <nd ref="1723795929"/>
+    <nd ref="247989232"/>
+    <tag k="alt_name" v="Srinagar - Kanyakumari Highway"/>
+    <tag k="alt_name_1" v="Delhi - Chennai Highway"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="int_ref" v="AH43"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="60"/>
+    <tag k="name" v="Outer Ring Road"/>
+    <tag k="name:kn" v="ಹೊರ ವರ್ತುಲ ರಸ್ತೆ"/>
+    <tag k="official_name" v="KC Reddy Ring Road"/>
+    <tag k="official_name:etymology:wikidata" v="Q6323235"/>
+    <tag k="official_name:kn" v="ಕ್ಚ್ ರೆಡ್ಡಿ ವರ್ತುಲ ರಸ್ತೆನ್ಟ್"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="ref" v="NH44;NH48"/>
+    <tag k="ref:old" v="NH7"/>
+    <tag k="ref_1" v="NH48"/>
+    <tag k="short_name" v="ORR"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="source:official_name" v="https://timesofindia.indiatimes.com/city/bengaluru/kc-reddy-vartula-raste-30km-orr-stretch-named-after-first-mysore-cm/articleshow/107002205.cms"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1090570629">
+    <nd ref="247989232"/>
+    <nd ref="6497456137"/>
+    <tag k="alt_name" v="Srinagar - Kanyakumari Highway"/>
+    <tag k="alt_name_1" v="Delhi - Chennai Highway"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="int_ref" v="AH43"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="60"/>
+    <tag k="name" v="Outer Ring Road"/>
+    <tag k="name:kn" v="ಹೊರ ವರ್ತುಲ ರಸ್ತೆ"/>
+    <tag k="official_name" v="KC Reddy Ring Road"/>
+    <tag k="official_name:etymology:wikidata" v="Q6323235"/>
+    <tag k="official_name:kn" v="ಕ್ಚ್ ರೆಡ್ಡಿ ವರ್ತುಲ ರಸ್ತೆನ್ಟ್"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="ref" v="NH44;NH48"/>
+    <tag k="ref:old" v="NH7"/>
+    <tag k="ref_1" v="NH48"/>
+    <tag k="short_name" v="ORR"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="source:official_name" v="https://timesofindia.indiatimes.com/city/bengaluru/kc-reddy-vartula-raste-30km-orr-stretch-named-after-first-mysore-cm/articleshow/107002205.cms"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1108993651">
+    <nd ref="1123386062"/>
+    <nd ref="10081538827"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="lanes" v="1"/>
+    <tag k="maxspeed" v="50"/>
+    <tag k="name" v="Outer Ring Road"/>
+    <tag k="name:kn" v="ಹೊರ ವರ್ತುಲ ರಸ್ತೆ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="short_name" v="ORR"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="smoothness" v="intermediate"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1108993653">
+    <nd ref="10081538827"/>
+    <nd ref="494271091"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="lanes" v="1"/>
+    <tag k="maxspeed" v="50"/>
+    <tag k="name" v="Outer Ring Road"/>
+    <tag k="name:kn" v="ಹೊರ ವರ್ತುಲ ರಸ್ತೆ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="short_name" v="ORR"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="smoothness" v="intermediate"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1109948513">
+    <nd ref="3805003790"/>
+    <nd ref="4105324822"/>
+    <tag k="alt_name" v="Delhi - Chennai Highway"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="int_ref" v="AH43"/>
+    <tag k="lanes" v="2"/>
+    <tag k="maxspeed" v="80"/>
+    <tag k="name" v="Srinagar - Kanyakumari Highway"/>
+    <tag k="name:kn" v="ಕನ್ಯಾಕುಮಾರಿ - ಶ್ರೀನಗರ ಹೆದ್ದಾರಿ"/>
+    <tag k="ref" v="NH44;NH48"/>
+    <tag k="ref:old" v="NH7"/>
+    <tag k="ref_1" v="NH48"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1109948890">
+    <nd ref="10153960137"/>
+    <nd ref="494271080"/>
+    <nd ref="4105324822"/>
+    <tag k="alt_name" v="Srinagar - Kanyakumari Highway"/>
+    <tag k="alt_name_1" v="Delhi - Chennai Highway"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="int_ref" v="AH43"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="60"/>
+    <tag k="name" v="Outer Ring Road"/>
+    <tag k="name:kn" v="ಹೊರ ವರ್ತುಲ ರಸ್ತೆ"/>
+    <tag k="noexit" v="yes"/>
+    <tag k="official_name" v="KC Reddy Ring Road"/>
+    <tag k="official_name:etymology:wikidata" v="Q6323235"/>
+    <tag k="official_name:kn" v="ಕ್ಚ್ ರೆಡ್ಡಿ ವರ್ತುಲ ರಸ್ತೆನ್ಟ್"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="ref" v="NH44;NH48"/>
+    <tag k="ref:old" v="NH7"/>
+    <tag k="ref_1" v="NH48"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="source:official_name" v="https://timesofindia.indiatimes.com/city/bengaluru/kc-reddy-vartula-raste-30km-orr-stretch-named-after-first-mysore-cm/articleshow/107002205.cms"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1155963376">
+    <nd ref="9797838896"/>
+    <nd ref="8243174052"/>
+    <nd ref="494271061"/>
+    <nd ref="1617747736"/>
+    <nd ref="13337723222"/>
+    <nd ref="306593854"/>
+    <tag k="alt_name" v="Srinagar - Kanyakumari Highway"/>
+    <tag k="alt_name_1" v="Delhi - Chennai Highway"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="int_ref" v="AH43"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="80"/>
+    <tag k="name" v="Hosur Road"/>
+    <tag k="name:etymology:wikidata" v="Q297967"/>
+    <tag k="name:kn" v="ಹೊಸೂರು ರಸ್ತೆ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="ref" v="NH44"/>
+    <tag k="ref:old" v="NH7"/>
+    <tag k="ref_1" v="NH48"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1167293938">
+    <nd ref="10855370147"/>
+    <nd ref="1723795924"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="lanes" v="3"/>
+    <tag k="maxspeed" v="40"/>
+    <tag k="name" v="Outer Ring Road"/>
+    <tag k="name:kn" v="ಹೊರ ವರ್ತುಲ ರಸ್ತೆ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="short_name" v="ORR"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1208112302">
+    <nd ref="1613147976"/>
+    <nd ref="2472135134"/>
+    <nd ref="1472248429"/>
+    <tag k="alt_name" v="Hosur Road"/>
+    <tag k="embankment" v="yes"/>
+    <tag k="foot" v="no"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="int_ref" v="AH43"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="loc_name" v="Hosur Road"/>
+    <tag k="maxspeed" v="60"/>
+    <tag k="maxweight:signed" v="no"/>
+    <tag k="name" v="Silk Board Flyover"/>
+    <tag k="name:kn" v="ಹೊಸೂರು ರಸ್ತೆ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="ref:old" v="NH7"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1208112303">
+    <nd ref="494271075"/>
+    <nd ref="1613147978"/>
+    <tag k="alt_name" v="Hosur Road"/>
+    <tag k="embankment" v="yes"/>
+    <tag k="foot" v="no"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="int_ref" v="AH43"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="loc_name" v="Hosur Road"/>
+    <tag k="maxspeed" v="40"/>
+    <tag k="maxweight:signed" v="no"/>
+    <tag k="name" v="Silk Board Flyover"/>
+    <tag k="name:kn" v="ಹೊಸೂರು ರಸ್ತೆ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="ref:old" v="NH7"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1299917512">
+    <nd ref="5067333236"/>
+    <nd ref="5067333237"/>
+    <nd ref="12040966305"/>
+    <nd ref="11664293092"/>
+    <nd ref="11664293093"/>
+    <nd ref="11664293094"/>
+    <nd ref="12057714071"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="check_date" v="2024-03-01"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="layer" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="40"/>
+    <tag k="name" v="Silkboard Double Decker Flyover"/>
+    <tag k="official_name" v="Silk Board Interchange"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="start_date" v="2024-07-17"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1299917514">
+    <nd ref="12040966323"/>
+    <nd ref="13354702089"/>
+    <nd ref="12040966320"/>
+    <nd ref="12040966319"/>
+    <nd ref="12040966317"/>
+    <nd ref="12040966322"/>
+    <nd ref="12040966313"/>
+    <nd ref="12040966321"/>
+    <nd ref="12040966311"/>
+    <nd ref="13075406635"/>
+    <nd ref="12040966309"/>
+    <nd ref="11726718192"/>
+    <nd ref="13075406636"/>
+    <nd ref="12040966310"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="check_date" v="2024-07-08"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="layer" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="40"/>
+    <tag k="name" v="Ramp A"/>
+    <tag k="official_name" v="Silk Board Interchange"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="start_date" v="2024-07-17"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1301808819">
+    <nd ref="12057714071"/>
+    <nd ref="11664293095"/>
+    <nd ref="11664293096"/>
+    <tag k="check_date" v="2024-03-01"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="maxspeed" v="40"/>
+    <tag k="name" v="Silkboard Double Decker Flyover"/>
+    <tag k="official_name" v="Silk Board Interchange"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="start_date" v="2024-07-17"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1303068639">
+    <nd ref="2509423121"/>
+    <nd ref="1123386070"/>
+    <nd ref="3805003786"/>
+    <nd ref="3805003789"/>
+    <nd ref="12068001056"/>
+    <nd ref="3805003788"/>
+    <nd ref="12068001057"/>
+    <nd ref="3805003787"/>
+    <nd ref="12068001058"/>
+    <tag k="alt_name" v="Delhi - Chennai Highway"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="int_ref" v="AH43"/>
+    <tag k="lanes" v="2"/>
+    <tag k="maxspeed" v="80"/>
+    <tag k="name" v="Srinagar - Kanyakumari Highway"/>
+    <tag k="name:kn" v="ಕನ್ಯಾಕುಮಾರಿ - ಶ್ರೀನಗರ ಹೆದ್ದಾರಿ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="ref" v="NH44;NH48"/>
+    <tag k="ref:old" v="NH7"/>
+    <tag k="ref_1" v="NH48"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1416769967">
+    <nd ref="11664293096"/>
+    <nd ref="494271073"/>
+    <tag k="foot" v="no"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="int_ref" v="AH43"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="80"/>
+    <tag k="name" v="Hosur Road"/>
+    <tag k="name:etymology:wikidata" v="Q297967"/>
+    <tag k="name:kn" v="ಹೊಸೂರು ರಸ್ತೆ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="ref" v="NH44"/>
+    <tag k="ref:old" v="NH7"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1453821325">
+    <nd ref="12068001058"/>
+    <nd ref="12068001060"/>
+    <nd ref="4105324822"/>
+    <tag k="alt_name" v="Delhi - Chennai Highway"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="int_ref" v="AH43"/>
+    <tag k="lanes" v="2"/>
+    <tag k="maxspeed" v="80"/>
+    <tag k="name" v="Srinagar - Kanyakumari Highway"/>
+    <tag k="name:kn" v="ಕನ್ಯಾಕುಮಾರಿ - ಶ್ರೀನಗರ ಹೆದ್ದಾರಿ"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="ref" v="NH44;NH48"/>
+    <tag k="ref:old" v="NH7"/>
+    <tag k="ref_1" v="NH48"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1454345481">
+    <nd ref="13337723223"/>
+    <nd ref="1617747730"/>
+    <tag k="frontage_road" v="yes"/>
+    <tag k="highway" v="trunk"/>
+    <tag k="lanes" v="2"/>
+    <tag k="maxspeed" v="40"/>
+    <tag k="name" v="Service Road"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <node id="494271061" lat="12.9135919" lon="77.6248109"/>
+  <node id="8243174052" lat="12.9130260" lon="77.6251583"/>
+  <node id="9797838896" lat="12.9114595" lon="77.6261198"/>
+  <node id="13379577436" lat="12.9167707" lon="77.6009818"/>
+  <node id="8239947021" lat="12.9166490" lon="77.6068966"/>
+  <node id="8239947022" lat="12.9167301" lon="77.6046272"/>
+  <node id="8239947023" lat="12.9167565" lon="77.6018886"/>
+  <node id="8239947085" lat="12.9166985" lon="77.6055093"/>
+  <node id="8239947017" lat="12.9164926" lon="77.6142033"/>
+  <node id="8239947018" lat="12.9165024" lon="77.6139489"/>
+  <node id="8239947019" lat="12.9165901" lon="77.6106789"/>
+  <node id="8239947020" lat="12.9166269" lon="77.6087690"/>
+  <node id="8239947088" lat="12.9165832" lon="77.6118255"/>
+  <node id="247989228" lat="12.9163685" lon="77.6192664"/>
+  <node id="307407783" lat="12.9165508" lon="77.6201826"/>
+  <node id="494271091" lat="12.9163133" lon="77.6199358"/>
+  <node id="494271095" lat="12.9163543" lon="77.6187185"/>
+  <node id="2510395005" lat="12.9163194" lon="77.6166903"/>
+  <node id="6182653341" lat="12.9163182" lon="77.6170671"/>
+  <node id="6518859300" lat="12.9163528" lon="77.6163047"/>
+  <node id="8239896807" lat="12.9163982" lon="77.6197489"/>
+  <node id="8239896808" lat="12.9163764" lon="77.6195336"/>
+  <node id="8239896810" lat="12.9163443" lon="77.6193191"/>
+  <node id="8239896811" lat="12.9163339" lon="77.6189793"/>
+  <node id="8239896812" lat="12.9163121" lon="77.6175646"/>
+  <node id="8239896813" lat="12.9162816" lon="77.6171045"/>
+  <node id="8239896814" lat="12.9162711" lon="77.6166660"/>
+  <node id="8239896815" lat="12.9164012" lon="77.6155799"/>
+  <node id="8239896816" lat="12.9164387" lon="77.6150652"/>
+  <node id="8239947094" lat="12.9163313" lon="77.6161169"/>
+  <node id="8239947095" lat="12.9163509" lon="77.6175426"/>
+  <node id="12040966317" lat="12.9168316" lon="77.6204767"/>
+  <node id="12040966319" lat="12.9167374" lon="77.6204110"/>
+  <node id="12040966320" lat="12.9165539" lon="77.6202964"/>
+  <node id="12040966322" lat="12.9170095" lon="77.6206199"/>
+  <node id="12040966323" lat="12.9164729" lon="77.6200533"/>
+  <node id="12695683918" lat="12.9164670" lon="77.6198819"/>
+  <node id="12695683928" lat="12.9165077" lon="77.6200281"/>
+  <node id="13075406631" lat="12.9163890" lon="77.6194449"/>
+  <node id="13354702089" lat="12.9165054" lon="77.6201806"/>
+  <node id="247989232" lat="12.9176822" lon="77.6243834"/>
+  <node id="306593854" lat="12.9147868" lon="77.6240948"/>
+  <node id="306594280" lat="12.9172507" lon="77.6224563"/>
+  <node id="494271023" lat="12.9169759" lon="77.6216695"/>
+  <node id="494271066" lat="12.9176164" lon="77.6249271"/>
+  <node id="494271067" lat="12.9176224" lon="77.6251311"/>
+  <node id="494271069" lat="12.9150658" lon="77.6239418"/>
+  <node id="494271073" lat="12.9140741" lon="77.6246589"/>
+  <node id="494271075" lat="12.9192766" lon="77.6214862"/>
+  <node id="494271080" lat="12.9173081" lon="77.6231104"/>
+  <node id="494271113" lat="12.9175781" lon="77.6257560"/>
+  <node id="494271114" lat="12.9175253" lon="77.6259953"/>
+  <node id="1123386062" lat="12.9169283" lon="77.6219684"/>
+  <node id="1123386070" lat="12.9167603" lon="77.6228902"/>
+  <node id="1472248429" lat="12.9193784" lon="77.6212875"/>
+  <node id="1613147976" lat="12.9186160" lon="77.6218568"/>
+  <node id="1613147978" lat="12.9186638" lon="77.6219355"/>
+  <node id="1617747730" lat="12.9147233" lon="77.6239622"/>
+  <node id="1617747736" lat="12.9142964" lon="77.6243627"/>
+  <node id="1723790725" lat="12.9171705" lon="77.6222334"/>
+  <node id="1723795924" lat="12.9172126" lon="77.6226574"/>
+  <node id="1723795929" lat="12.9175615" lon="77.6236280"/>
+  <node id="1723812913" lat="12.9171404" lon="77.6228925"/>
+  <node id="1723812971" lat="12.9176200" lon="77.6224757"/>
+  <node id="1723813002" lat="12.9171082" lon="77.6227896"/>
+  <node id="1723840726" lat="12.9180437" lon="77.6223393"/>
+  <node id="2472135134" lat="12.9189684" lon="77.6215952"/>
+  <node id="2472135139" lat="12.9151188" lon="77.6240446"/>
+  <node id="2509423121" lat="12.9165505" lon="77.6229543"/>
+  <node id="2509423122" lat="12.9160684" lon="77.6231905"/>
+  <node id="2509428534" lat="12.9168542" lon="77.6212842"/>
+  <node id="2619300318" lat="12.9167749" lon="77.6210334"/>
+  <node id="2971089259" lat="12.9171967" lon="77.6227353"/>
+  <node id="3740373536" lat="12.9163778" lon="77.6230294"/>
+  <node id="3804880020" lat="12.9174761" lon="77.6238988"/>
+  <node id="3804880021" lat="12.9176182" lon="77.6253351"/>
+  <node id="3804880025" lat="12.9176102" lon="77.6255550"/>
+  <node id="3804880026" lat="12.9175524" lon="77.6244169"/>
+  <node id="3804880035" lat="12.9176109" lon="77.6247091"/>
+  <node id="3805003786" lat="12.9168664" lon="77.6228536"/>
+  <node id="3805003787" lat="12.9171577" lon="77.6228631"/>
+  <node id="3805003788" lat="12.9170482" lon="77.6228392"/>
+  <node id="3805003789" lat="12.9169462" lon="77.6228375"/>
+  <node id="3805003790" lat="12.9173954" lon="77.6229259"/>
+  <node id="4105324822" lat="12.9172887" lon="77.6229515"/>
+  <node id="5067333236" lat="12.9181046" lon="77.6227173"/>
+  <node id="5067333237" lat="12.9176988" lon="77.6229179"/>
+  <node id="5067333239" lat="12.9185042" lon="77.6225295"/>
+  <node id="5067333240" lat="12.9190028" lon="77.6221800"/>
+  <node id="5067333241" lat="12.9190668" lon="77.6220452"/>
+  <node id="5067333242" lat="12.9191001" lon="77.6218761"/>
+  <node id="5067333243" lat="12.9190728" lon="77.6216997"/>
+  <node id="5067333244" lat="12.9190240" lon="77.6216117"/>
+  <node id="5067333245" lat="12.9189401" lon="77.6215249"/>
+  <node id="5067333246" lat="12.9188326" lon="77.6214463"/>
+  <node id="6497456137" lat="12.9177084" lon="77.6247366"/>
+  <node id="7232644749" lat="12.9152415" lon="77.6236515"/>
+  <node id="7294283056" lat="12.9175581" lon="77.6244453"/>
+  <node id="10081538827" lat="12.9167765" lon="77.6215184"/>
+  <node id="10097182475" lat="12.9169193" lon="77.6214901"/>
+  <node id="10153960137" lat="12.9173496" lon="77.6233051"/>
+  <node id="10282796509" lat="12.9173744" lon="77.6228281"/>
+  <node id="10282796511" lat="12.9173014" lon="77.6225966"/>
+  <node id="10855370147" lat="12.9172563" lon="77.6228033"/>
+  <node id="10872824023" lat="12.9170799" lon="77.6223011"/>
+  <node id="11374929988" lat="12.9175302" lon="77.6242664"/>
+  <node id="11664293092" lat="12.9163879" lon="77.6234745"/>
+  <node id="11664293093" lat="12.9159263" lon="77.6237162"/>
+  <node id="11664293094" lat="12.9153976" lon="77.6240067"/>
+  <node id="11664293095" lat="12.9148464" lon="77.6243203"/>
+  <node id="11664293096" lat="12.9145188" lon="77.6243915"/>
+  <node id="11726543776" lat="12.9188884" lon="77.6222926"/>
+  <node id="11726543777" lat="12.9187445" lon="77.6223980"/>
+  <node id="11726718192" lat="12.9182590" lon="77.6214176"/>
+  <node id="11964440714" lat="12.9148111" lon="77.6242258"/>
+  <node id="11964440729" lat="12.9161431" lon="77.6233472"/>
+  <node id="11964440731" lat="12.9185930" lon="77.6219816"/>
+  <node id="12040966305" lat="12.9168819" lon="77.6233245"/>
+  <node id="12040966309" lat="12.9181096" lon="77.6214024"/>
+  <node id="12040966310" lat="12.9187690" lon="77.6214199"/>
+  <node id="12040966311" lat="12.9177134" lon="77.6212072"/>
+  <node id="12040966313" lat="12.9172765" lon="77.6208749"/>
+  <node id="12040966321" lat="12.9176181" lon="77.6211381"/>
+  <node id="12057714071" lat="12.9149255" lon="77.6242747"/>
+  <node id="12068001056" lat="12.9169900" lon="77.6228348"/>
+  <node id="12068001057" lat="12.9170990" lon="77.6228463"/>
+  <node id="12068001058" lat="12.9172150" lon="77.6228991"/>
+  <node id="12068001060" lat="12.9172485" lon="77.6229219"/>
+  <node id="12129307874" lat="12.9174042" lon="77.6235614"/>
+  <node id="12164834291" lat="12.9174551" lon="77.6238004"/>
+  <node id="12196449735" lat="12.9163304" lon="77.6230541"/>
+  <node id="13074467238" lat="12.9167977" lon="77.6211055"/>
+  <node id="13075406632" lat="12.9183288" lon="77.6226139"/>
+  <node id="13075406635" lat="12.9179236" lon="77.6213385"/>
+  <node id="13075406636" lat="12.9185249" lon="77.6214203"/>
+  <node id="13337723222" lat="12.9145950" lon="77.6242019"/>
+  <node id="13337723223" lat="12.9146418" lon="77.6240088"/>
+  <node id="494271115" lat="12.9167498" lon="77.6285856"/>
+  <node id="494271117" lat="12.9167297" lon="77.6287887"/>
+  <node id="650141295" lat="12.9166561" lon="77.6299413"/>
+  <node id="2453736858" lat="12.9165405" lon="77.6317612"/>
+  <node id="2619300330" lat="12.9166941" lon="77.6292164"/>
+  <node id="3804880023" lat="12.9166138" lon="77.6309395"/>
+  <node id="3804880033" lat="12.9168049" lon="77.6283794"/>
+  <node id="11374930008" lat="12.9164911" lon="77.6322917"/>
+  <node id="13075406642" lat="12.9166887" lon="77.6293197"/>
+
+</osm>

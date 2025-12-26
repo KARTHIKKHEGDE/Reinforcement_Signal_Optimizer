@@ -16,12 +16,14 @@ const apiClient = axios.create({
 export interface SimulationRequest {
     mode: 'fixed' | 'rl';
     use_gui: boolean;
+    traffic_scenario?: 'peak' | 'offpeak';
 }
 
 export interface SimulationResponse {
     status: string;
     message: string;
     mode?: string;
+    traffic_scenario?: string;
 }
 
 export interface SimulationStatus {
@@ -52,11 +54,13 @@ export interface MetricsSummary {
  */
 export const startSimulation = async (
     mode: 'fixed' | 'rl',
-    useGui: boolean = true
+    useGui: boolean = true,
+    trafficScenario: 'peak' | 'offpeak' = 'peak'
 ): Promise<SimulationResponse> => {
     const response = await apiClient.post<SimulationResponse>('/api/simulation/start', {
         mode,
         use_gui: useGui,
+        traffic_scenario: trafficScenario,
     });
     return response.data;
 };

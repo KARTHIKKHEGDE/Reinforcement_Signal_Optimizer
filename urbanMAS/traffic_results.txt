@@ -1,0 +1,22 @@
+Traffic Simulation Results
+==============================
+
+total_simulation_steps: 78.00
+total_vehicles_processed: 1618.00
+average_waiting_time: 3.03
+total_fuel_consumption: 1565670.01
+total_co2_emissions: 4908670.36
+average_throughput: 20.74
+
+Step-by-step data:
+--------------------
+Step 680: 18 vehicles, avg wait: 0.28s
+Step 690: 19 vehicles, avg wait: 2.11s
+Step 700: 21 vehicles, avg wait: 5.14s
+Step 710: 23 vehicles, avg wait: 8.83s
+Step 720: 27 vehicles, avg wait: 5.22s
+Step 730: 27 vehicles, avg wait: 0.11s
+Step 740: 23 vehicles, avg wait: 0.65s
+Step 750: 19 vehicles, avg wait: 1.84s
+Step 760: 18 vehicles, avg wait: 3.11s
+Step 770: 15 vehicles, avg wait: 0.73s

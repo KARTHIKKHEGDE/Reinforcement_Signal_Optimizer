@@ -47,10 +47,23 @@ class ConnectionManager:
         self.broadcasting = True
         print("Started broadcasting simulation metrics")
         
+        step_count = 0
         while self.broadcasting:
             try:
+                # ⚡ STEP THE SIMULATION (this makes vehicles move!)
+                step_success = traci_handler.simulation_step()
+                step_count += 1
+                
                 # Get current metrics from SUMO
                 metrics = traci_handler.get_metrics()
+                
+                # 🔍 DEBUG LOGGING - Print every 5 seconds
+                if step_count % 5 == 0:
+                    print(f"📊 Step {step_count}: Time={metrics.get('time', 0):.0f}s, "
+                          f"Vehicles={metrics.get('vehicle_count', 0)}, "
+                          f"Queue={metrics.get('queue_length', 0)}, "
+                          f"Departed={metrics.get('departed_vehicles', 0)}, "
+                          f"Arrived={metrics.get('arrived_vehicles', 0)}")
                 
                 # Broadcast to all connected clients
                 if self.active_connections:
@@ -60,7 +73,9 @@ class ConnectionManager:
                 await asyncio.sleep(settings.WS_UPDATE_INTERVAL)
                 
             except Exception as e:
-                print(f"Error in broadcast loop: {e}")
+                print(f"❌ Error in broadcast loop: {e}")
+                import traceback
+                traceback.print_exc()
                 await asyncio.sleep(1)
     
     def stop_broadcasting(self):

@@ -5,6 +5,7 @@ Manages starting, stopping, and monitoring SUMO simulation
 import subprocess
 import os
 import sys
+import time
 from typing import Optional
 from app.config import settings
 
@@ -59,28 +60,52 @@ class SUMORunner:
                 if traci.isLoaded():
                     print("Found active TraCI connection, closing it...")
                     traci.close()
+                    time.sleep(0.5)  # Wait for clean shutdown
             except Exception:
                 pass  # Ignore errors if connection is already broken
             
             # Start SUMO with TraCI
             try:
+                print(f"🚀 Starting SUMO with command: {' '.join(sumo_cmd)}")
                 traci.start(sumo_cmd)
+                time.sleep(2.0)  # ⚡ Wait longer for SUMO to fully initialize
+                
+                # 🔍 Check if SUMO loaded successfully
+                print(f"✅ SUMO connected! Checking initial state...")
+                loaded = traci.simulation.getLoadedNumber()
+                departed = traci.simulation.getDepartedNumber()
+                sim_time = traci.simulation.getTime()
+                
+                print(f"   - Loaded vehicles waiting to depart: {loaded}")
+                print(f"   - Departed vehicles: {departed}")
+                print(f"   - Simulation time: {sim_time}")
+                
             except traci.exceptions.TraCIException as e:
                 if "is already active" in str(e):
                     # If somehow still active, try to use it or force close again
                     print("TraCI connection active, retrying clean start...")
                     try:
                         traci.close()
+                        time.sleep(0.5)
                         traci.start(sumo_cmd)
+                        time.sleep(1.0)
                     except Exception as inner_e:
                         print(f"Failed to recover TraCI: {inner_e}")
                         raise e
                 else:
                     raise e
             
+            # ⚡ CRITICAL: Mark TraCI as connected AFTER successful start!
+            from app.sumo.traci_handler import traci_handler
+            traci_handler.connected = True
+            traci_handler.junction_ids = traci.trafficlight.getIDList()
+            traci_handler.lane_ids = traci.lane.getIDList()
+            print(f"   - Traffic lights: {len(traci_handler.junction_ids)}")
+            print(f"   - Lanes: {len(traci_handler.lane_ids)}")
+            
             self.is_running = True
             self.process = None  # traci manages the process
-            print("SUMO started successfully with TraCI")
+            print("✅ SUMO started successfully with TraCI")
             return True
             
         except Exception as e:

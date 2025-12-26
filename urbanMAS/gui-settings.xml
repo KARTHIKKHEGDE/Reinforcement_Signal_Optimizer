@@ -6,8 +6,7 @@
         <edges>
             <edge_attr color="black" width="1.0"/>
         </edges>
-        <!-- Force detailed drawing -->
-        <vehicles vehicleMode="0" vehicleQuality="2" minSize="1.5" showBlinker="true">
+        <vehicles>
             <vehicle_attr size="1.0" color="yellow"/>
         </vehicles>
         <junctions>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edges xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/edges_file.xsd">
+    <!-- Horizontal edges -->
+    <edge id="h_0_0_to_1_0" from="n_0_0" to="n_1_0" numLanes="2" speed="13.89"/>
+    <edge id="h_1_0_to_0_0" from="n_1_0" to="n_0_0" numLanes="2" speed="13.89"/>
+    <edge id="h_1_0_to_2_0" from="n_1_0" to="n_2_0" numLanes="2" speed="13.89"/>
+    <edge id="h_2_0_to_1_0" from="n_2_0" to="n_1_0" numLanes="2" speed="13.89"/>
+    
+    <edge id="h_0_1_to_1_1" from="n_0_1" to="n_1_1" numLanes="2" speed="13.89"/>
+    <edge id="h_1_1_to_0_1" from="n_1_1" to="n_0_1" numLanes="2" speed="13.89"/>
+    <edge id="h_1_1_to_2_1" from="n_1_1" to="n_2_1" numLanes="2" speed="13.89"/>
+    <edge id="h_2_1_to_1_1" from="n_2_1" to="n_1_1" numLanes="2" speed="13.89"/>
+    
+    <edge id="h_0_2_to_1_2" from="n_0_2" to="n_1_2" numLanes="2" speed="13.89"/>
+    <edge id="h_1_2_to_0_2" from="n_1_2" to="n_0_2" numLanes="2" speed="13.89"/>
+    <edge id="h_1_2_to_2_2" from="n_1_2" to="n_2_2" numLanes="2" speed="13.89"/>
+    <edge id="h_2_2_to_1_2" from="n_2_2" to="n_1_2" numLanes="2" speed="13.89"/>
+    
+    <!-- Vertical edges -->
+    <edge id="v_0_0_to_0_1" from="n_0_0" to="n_0_1" numLanes="2" speed="13.89"/>
+    <edge id="v_0_1_to_0_0" from="n_0_1" to="n_0_0" numLanes="2" speed="13.89"/>
+    <edge id="v_0_1_to_0_2" from="n_0_1" to="n_0_2" numLanes="2" speed="13.89"/>
+    <edge id="v_0_2_to_0_1" from="n_0_2" to="n_0_1" numLanes="2" speed="13.89"/>
+    
+    <edge id="v_1_0_to_1_1" from="n_1_0" to="n_1_1" numLanes="2" speed="13.89"/>
+    <edge id="v_1_1_to_1_0" from="n_1_1" to="n_1_0" numLanes="2" speed="13.89"/>
+    <edge id="v_1_1_to_1_2" from="n_1_1" to="n_1_2" numLanes="2" speed="13.89"/>
+    <edge id="v_1_2_to_1_1" from="n_1_2" to="n_1_1" numLanes="2" speed="13.89"/>
+    
+    <edge id="v_2_0_to_2_1" from="n_2_0" to="n_2_1" numLanes="2" speed="13.89"/>
+    <edge id="v_2_1_to_2_0" from="n_2_1" to="n_2_0" numLanes="2" speed="13.89"/>
+    <edge id="v_2_1_to_2_2" from="n_2_1" to="n_2_2" numLanes="2" speed="13.89"/>
+    <edge id="v_2_2_to_2_1" from="n_2_2" to="n_2_1" numLanes="2" speed="13.89"/>
+</edges>

@@ -19,6 +19,7 @@ interface ChartData {
 export const Dashboard: React.FC = () => {
     const [isRunning, setIsRunning] = useState(false);
     const [currentMode, setCurrentMode] = useState<'fixed' | 'rl'>('fixed');
+    const [trafficScenario, setTrafficScenario] = useState<'peak' | 'offpeak'>('peak');
     const [useGui, setUseGui] = useState(true);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -77,7 +78,7 @@ export const Dashboard: React.FC = () => {
         setError(null);
 
         try {
-            const response = await startSimulation(currentMode, useGui);
+            const response = await startSimulation(currentMode, useGui, trafficScenario);
             console.log('Simulation started:', response);
 
             setIsRunning(true);
@@ -168,6 +169,32 @@ export const Dashboard: React.FC = () => {
                                 RL Agent
                             </button>
                         </div>
+                    </div>
+
+                    <div className="control-group">
+                        <label>Traffic Scenario:</label>
+                        <div className="mode-selector">
+                            <button
+                                className={`mode-btn ${trafficScenario === 'peak' ? 'active' : ''}`}
+                                onClick={() => setTrafficScenario('peak')}
+                                disabled={isRunning}
+                            >
+                                🚗 Peak Hour
+                            </button>
+                            <button
+                                className={`mode-btn ${trafficScenario === 'offpeak' ? 'active' : ''}`}
+                                onClick={() => setTrafficScenario('offpeak')}
+                                disabled={isRunning}
+                            >
+                                🌤️ Off-Peak
+                            </button>
+                        </div>
+                        <small style={{ color: '#888', marginTop: '5px', display: 'block' }}>
+                            {trafficScenario === 'peak'
+                                ? '520 veh/h • Severe Congestion • Avg 11 km/h'
+                                : '200 veh/h • Moderate Flow • Avg 28 km/h'
+                            }
+                        </small>
                     </div>
 
                     <div className="control-group">
