@@ -133,6 +133,7 @@ export const Dashboard: React.FC<DashboardProps> = () => {
                             queueLength={currentMetrics?.queue_length || 0}
                             vehicleCount={currentMetrics?.vehicle_count || 0}
                             trafficLights={currentMetrics?.traffic_lights || {}}
+                            locationId={localStorage.getItem('lastLocation') || 'silk_board'}
                         />
                     </div>
                 </div>

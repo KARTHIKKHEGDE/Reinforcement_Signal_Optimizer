@@ -1,24 +1,51 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { wsService, SimulationMetrics } from '../services/socket';
+import { getLocations } from '../services/api';
 
 export const Comparison: React.FC = () => {
     const [data, setData] = useState<any[]>([]);
+    const [baselineValue, setBaselineValue] = useState(180); // Default fallback
 
     useEffect(() => {
-        // LOAD REAL DATA FROM LOCAL STORAGE
+        // 1. Determine Baseline based on location
+        const locId = localStorage.getItem('lastLocation') || 'silk_board';
+        getLocations().then(locs => {
+            const val = locs[locId]?.real_world_stats?.avg_wait_time || 180;
+            setBaselineValue(val);
+        });
+
+        // 2. Load initial history
         const history = JSON.parse(localStorage.getItem('simulationHistory') || '[]');
+        setData(formatData(history, baselineValue));
 
-        // Add a "Baseline" reference line for comparison (e.g., standard fixed time delay ~90s)
-        const enrichedData = history.map((point: any) => ({
-            ...point,
-            baseline: 96.5 // Constant baseline reference
-        }));
+        // 3. Subscribe to LIVE updates
+        const unsubscribe = wsService.subscribe((metrics: SimulationMetrics) => {
+            setData(prevData => {
+                const newPoint = {
+                    time: metrics.time,
+                    wait: metrics.waiting_time,
+                    queue: metrics.queue_length,
+                    vehicles: metrics.vehicle_count,
+                    baseline: baselineValue // Dynamic baseline
+                };
 
-        setData(enrichedData);
-    }, []);
+                // Keep chart moving (max 50 points)
+                const newData = [...prevData, newPoint];
+                if (newData.length > 50) newData.shift();
+                return newData;
+            });
+        });
 
-    // Helper: Calculate average from history
+        return () => unsubscribe();
+    }, [baselineValue]); // Re-subscribe if baseline changes (rare)
+
+    const formatData = (raw: any[], base: number) => {
+        return raw.map(p => ({ ...p, baseline: base }));
+    };
+
+    // Helper: Calculate average from CURRENT visible data
     const avg = (key: string) => {
         if (data.length === 0) return 0;
         return (data.reduce((sum, item) => sum + (item[key] || 0), 0) / data.length).toFixed(1);
