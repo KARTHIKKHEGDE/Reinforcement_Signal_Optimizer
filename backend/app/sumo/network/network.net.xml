@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Simple 4-way intersection network for traffic signal optimization -->
+<net version="1.16" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="-200.00,-200.00,200.00,200.00" origBoundary="-200.00,-200.00,200.00,200.00" projParameter="!"/>
+
+    <!-- Edges (Roads) -->
+    <edge id="north_in" from="north" to="junction_1" priority="1">
+        <lane id="north_in_0" index="0" speed="13.89" length="200.00" shape="-1.60,200.00 -1.60,10.00"/>
+        <lane id="north_in_1" index="1" speed="13.89" length="200.00" shape="1.60,200.00 1.60,10.00"/>
+    </edge>
+
+    <edge id="south_in" from="south" to="junction_1" priority="1">
+        <lane id="south_in_0" index="0" speed="13.89" length="200.00" shape="1.60,-200.00 1.60,-10.00"/>
+        <lane id="south_in_1" index="1" speed="13.89" length="200.00" shape="-1.60,-200.00 -1.60,-10.00"/>
+    </edge>
+
+    <edge id="east_in" from="east" to="junction_1" priority="1">
+        <lane id="east_in_0" index="0" speed="13.89" length="200.00" shape="200.00,1.60 10.00,1.60"/>
+        <lane id="east_in_1" index="1" speed="13.89" length="200.00" shape="200.00,-1.60 10.00,-1.60"/>
+    </edge>
+
+    <edge id="west_in" from="west" to="junction_1" priority="1">
+        <lane id="west_in_0" index="0" speed="13.89" length="200.00" shape="-200.00,-1.60 -10.00,-1.60"/>
+        <lane id="west_in_1" index="1" speed="13.89" length="200.00" shape="-200.00,1.60 -10.00,1.60"/>
+    </edge>
+
+    <edge id="north_out" from="junction_1" to="north" priority="1">
+        <lane id="north_out_0" index="0" speed="13.89" length="200.00" shape="-1.60,10.00 -1.60,200.00"/>
+    </edge>
+
+    <edge id="south_out" from="junction_1" to="south" priority="1">
+        <lane id="south_out_0" index="0" speed="13.89" length="200.00" shape="1.60,-10.00 1.60,-200.00"/>
+    </edge>
+
+    <edge id="east_out" from="junction_1" to="east" priority="1">
+        <lane id="east_out_0" index="0" speed="13.89" length="200.00" shape="10.00,1.60 200.00,1.60"/>
+    </edge>
+
+    <edge id="west_out" from="junction_1" to="west" priority="1">
+        <lane id="west_out_0" index="0" speed="13.89" length="200.00" shape="-10.00,-1.60 -200.00,-1.60"/>
+    </edge>
+
+    <!-- Junctions (Nodes) -->
+    <junction id="junction_1" type="traffic_light" x="0.00" y="0.00" incLanes="north_in_0 north_in_1 south_in_0 south_in_1 east_in_0 east_in_1 west_in_0 west_in_1" intLanes="" shape="-3.20,10.00 3.20,10.00 3.20,-10.00 -3.20,-10.00 -10.00,-3.20 -10.00,3.20 10.00,3.20 10.00,-3.20">
+        <request index="0" response="0000" foes="0000"/>
+        <request index="1" response="0000" foes="0000"/>
+        <request index="2" response="0000" foes="0000"/>
+        <request index="3" response="0000" foes="0000"/>
+    </junction>
+
+    <junction id="north" type="dead_end" x="0.00" y="200.00" incLanes="north_out_0" intLanes="" shape="0.00,200.00 -3.20,200.00 0.00,200.00"/>
+    <junction id="south" type="dead_end" x="0.00" y="-200.00" incLanes="south_out_0" intLanes="" shape="0.00,-200.00 3.20,-200.00 0.00,-200.00"/>
+    <junction id="east" type="dead_end" x="200.00" y="0.00" incLanes="east_out_0" intLanes="" shape="200.00,0.00 200.00,3.20 200.00,0.00"/>
+    <junction id="west" type="dead_end" x="-200.00" y="0.00" incLanes="west_out_0" intLanes="" shape="-200.00,0.00 -200.00,-3.20 -200.00,0.00"/>
+
+    <!-- Traffic Light Logic -->
+    <tlLogic id="junction_1" type="static" programID="0" offset="0">
+        <!-- Phase 0: North-South Green -->
+        <phase duration="30" state="GGrrGGrr"/>
+        <!-- Phase 1: North-South Yellow -->
+        <phase duration="3" state="yyrryyrr"/>
+        <!-- Phase 2: East-West Green -->
+        <phase duration="30" state="rrGGrrGG"/>
+        <!-- Phase 3: East-West Yellow -->
+        <phase duration="3" state="rryyrryy"/>
+    </tlLogic>
+
+    <!-- Connections -->
+    <connection from="north_in" to="south_out" fromLane="0" toLane="0" tl="junction_1" linkIndex="0" dir="s" state="M"/>
+    <connection from="south_in" to="north_out" fromLane="0" toLane="0" tl="junction_1" linkIndex="1" dir="s" state="M"/>
+    <connection from="east_in" to="west_out" fromLane="0" toLane="0" tl="junction_1" linkIndex="2" dir="s" state="M"/>
+    <connection from="west_in" to="east_out" fromLane="0" toLane="0" tl="junction_1" linkIndex="3" dir="s" state="M"/>
+
+</net>
