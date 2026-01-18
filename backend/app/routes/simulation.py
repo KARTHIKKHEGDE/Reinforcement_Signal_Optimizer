@@ -81,12 +81,14 @@ def update_sumo_config(location: str):
         real_net = f"{location}.net.xml"
         if os.path.exists(os.path.join(net_dir, real_net)):
             net_file = real_net
-            route_file = f"routes_{location}.rou.xml"
+            # Always use routes_demand.rou.xml which is generated from real CSV data
+            route_file = "routes_demand.rou.xml"
             print(f"✅ Using Real Map: {net_file}")
+            print(f"✅ Using Demand Routes: {route_file}")
         else:
             # Fallback to grid
             net_file = "network.net.xml" 
-            route_file = f"routes_{location}.rou.xml"
+            route_file = "routes_demand.rou.xml"
             print(f"⚠️ Using Grid Map (Real map not found)")
         
         input_node = root.find("input")
@@ -118,6 +120,40 @@ async def start_simulation(request: SimulationRequest):
         # Check if already running
         if sumo_runner.is_running:
             raise HTTPException(status_code=400, detail="Simulation is already running")
+        
+        # Generate demand-based routes for the location
+        print(f"📊 Generating traffic demand for {request.location}...")
+        
+        # Use peak hours based on traffic_scenario
+        if request.traffic_scenario == "peak":
+            start_hour, end_hour = 8, 9  # Morning peak 8-9 AM
+        else:
+            start_hour, end_hour = 14, 15  # Off-peak 2-3 PM
+        
+        # Generate vehicle demand
+        vehicles, summary = demand_generator.generate_demand(
+            location=request.location,
+            start_hour=start_hour,
+            start_minute=0,
+            end_hour=end_hour,
+            end_minute=0
+        )
+        
+        if not vehicles:
+            raise HTTPException(
+                status_code=400,
+                detail=f"No vehicles generated for {request.location}. Check CSV data."
+            )
+        
+        # Write route file
+        current_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        route_output = os.path.join(current_dir, "sumo", "network", "routes_demand.rou.xml")
+        
+        success = demand_generator.write_route_file(vehicles, route_output, summary)
+        if not success:
+            raise HTTPException(status_code=500, detail="Failed to generate route file")
+        
+        print(f"✅ Generated {len(vehicles)} vehicles for simulation")
         
         # Update Config for Location
         if request.location in locations_data:
