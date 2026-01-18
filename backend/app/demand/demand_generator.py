@@ -67,7 +67,7 @@ class DemandGenerator:
     def __init__(self, seed: int = 42):
         self.seed = seed
         random.seed(seed)
-        
+    
     def generate_demand(
         self,
         location: str,
@@ -87,6 +87,10 @@ class DemandGenerator:
         total_vehicles = demand_info['total_vehicles']
         duration_seconds = demand_info['duration_minutes'] * 60
         by_direction = demand_info['by_direction']
+        
+        print(f"🚗 Generating {total_vehicles} vehicles")
+        print(f"   North: {by_direction['north']}, South: {by_direction['south']}, "
+              f"East: {by_direction['east']}, West: {by_direction['west']}")
         
         # Get edges for this location
         edges_map = self.LOCATION_EDGES.get(location, self.LOCATION_EDGES['silk_board'])

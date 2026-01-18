@@ -306,9 +306,15 @@ def update_sumo_config_for_demand(location: str, route_file: str):
 
 @router.post("/stop", response_model=DualResponse)
 async def stop_dual_simulation():
-    """Stop both SUMO simulations"""
+    """Stop both SUMO simulations and clean up properly"""
+    print("🛑 Stopping dual simulation...")
     dual_manager.stop_broadcasting()
     dual_orchestrator.stop_all()
+    
+    # Give time for complete cleanup
+    await asyncio.sleep(2)
+    
+    print("✅ Dual simulation stopped and cleaned up")
     
     return DualResponse(
         status="success",

@@ -47,7 +47,15 @@ class ConnectionManager:
     async def start_broadcasting(self, mode: str = "fixed", intensity: str = None):
         """Start broadcasting simulation metrics"""
         self.broadcasting = True
-        print(f"Started broadcasting simulation metrics in {mode} mode (intensity: {intensity})")
+        print(f"🚀 Started broadcasting simulation metrics in {mode} mode (intensity: {intensity})")
+        
+        # Ensure TraCI is connected
+        if not traci_handler.connected:
+            print("⚠️ TraCI not connected, attempting to connect...")
+            if not traci_handler.connect():
+                print("❌ Failed to connect TraCI, stopping broadcast")
+                self.broadcasting = False
+                return
         
         # Load RL model if in RL mode
         if mode == "rl":

@@ -270,6 +270,14 @@ class DynamicRouteGenerator:
                 f.write('length="5.5" maxSpeed="60" guiShape="emergency" ')
                 f.write('vClass="emergency" color="1,0,0"/>\n\n')
                 
+                # Define routes (edge sequences for each direction)
+                # For grid network: vehicles enter from _in edges and exit through _out edges
+                f.write('    <!-- Route Definitions for Grid Network -->\n')
+                f.write('    <route id="route_north" edges="south_in south_to_center center_to_north north_out"/>\n')
+                f.write('    <route id="route_south" edges="north_in north_to_center center_to_south south_out"/>\n')
+                f.write('    <route id="route_east" edges="west_in west_to_center center_to_east east_out"/>\n')
+                f.write('    <route id="route_west" edges="east_in east_to_center center_to_west west_out"/>\n\n')
+                
                 # Write vehicle departures
                 f.write(f'    <!-- Vehicles for Hour {hour}:00 ({len(vehicles)} total) -->\n')
                 f.write(f'    <!-- Location: {location}, Generated from real arrival rates -->\n\n')

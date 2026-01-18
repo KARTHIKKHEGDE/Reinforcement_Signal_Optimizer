@@ -19,6 +19,7 @@ from typing import Literal, Optional
 import xml.etree.ElementTree as ET
 import os
 import json
+from app.demand.demand_generator import demand_generator
 
 # Load locations data
 # Resolve path relative to this file: backend/app/routes/simulation.py -> backend/data/

@@ -381,6 +381,8 @@ class DualSimulationOrchestrator:
                     print(f"   ✓ {sim.name} TraCI closed")
             except Exception as e:
                 print(f"   ⚠️ Error closing {sim.name} TraCI: {e}")
+                # Force disconnect
+                sim.connected = False
                 
             try:
                 if sim.process:
@@ -390,10 +392,17 @@ class DualSimulationOrchestrator:
                     print(f"   ✓ {sim.name} process terminated")
             except Exception as e:
                 print(f"   ⚠️ Error terminating {sim.name} process: {e}")
+                sim.process = None
+            
+            # Reset simulation state
+            sim.junction_ids = []
+            sim.lane_ids = []
+            sim.total_departed = 0
+            sim.total_arrived = 0
             
         self.is_running = False
         self.current_step = 0
-        print("✅ Dual simulation stopped")
+        print("✅ Dual simulation stopped and state reset")
         return True
     
     def get_status(self) -> Dict:

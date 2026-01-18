@@ -1,32 +1,39 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { Landing } from './pages/Landing';
-import { JunctionSelection } from './pages/JunctionSelection';
-import { Dashboard } from './pages/Dashboard';
-import { Comparison } from './pages/Comparison';
-import { AgentInsights } from './pages/AgentInsights';
-import { Results } from './pages/Results';
-import { Scenarios } from './pages/Scenarios';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import { Landing } from "./pages/Landing";
+import { JunctionSelection } from "./pages/JunctionSelection";
+import { Dashboard } from "./pages/Dashboard";
+import { DualComparison } from "./pages/DualComparison";
+import { Comparison } from "./pages/Comparison";
+import { AgentInsights } from "./pages/AgentInsights";
+import { Results } from "./pages/Results";
+import { Scenarios } from "./pages/Scenarios";
+import "./App.css";
 
 function App() {
-    return (
-        <Router>
-            <div className="App">
-                <div className="grid-pattern"></div>
-                <Routes>
-                    <Route path="/" element={<Landing />} />
-                    <Route path="/junctions" element={<JunctionSelection />} />
-                    <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/comparison" element={<Comparison />} />
-                    <Route path="/agent" element={<AgentInsights />} />
-                    <Route path="/results" element={<Results />} />
-                    <Route path="/scenarios" element={<Scenarios />} />
-                    <Route path="*" element={<Navigate to="/" replace />} />
-                </Routes>
-            </div>
-        </Router>
-    );
+  return (
+    <Router>
+      <div className="App">
+        <div className="grid-pattern"></div>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/junctions" element={<JunctionSelection />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dual" element={<DualComparison />} />
+          <Route path="/comparison" element={<Comparison />} />
+          <Route path="/agent" element={<AgentInsights />} />
+          <Route path="/results" element={<Results />} />
+          <Route path="/scenarios" element={<Scenarios />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
 export default App;

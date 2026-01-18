@@ -21,41 +21,70 @@ class TraCIHandler:
         Connect to SUMO via TraCI
         
         Args:
-            port: TraCI port number
+            port: TraCI port number (only used for dual/multi-instance mode)
             
         Returns:
             bool: True if connected successfully
         """
         try:
+            # Check if already connected (e.g., via sumo_runner.start())
             if self.connected:
+                print(f"✅ TraCI already connected")
                 return True
             
+            # Check if TraCI is already loaded/active
+            if traci.isLoaded():
+                print(f"✅ TraCI connection detected, using existing connection")
+                self.connected = True
+                
+                # Get junction and lane IDs
+                self.junction_ids = list(traci.trafficlight.getIDList())
+                self.lane_ids = list(traci.lane.getIDList())
+                
+                print(f"   Found {len(self.junction_ids)} junctions, {len(self.lane_ids)} lanes")
+                return True
+            
+            # Only try to init if not already connected (for dual-mode)
+            print(f"🔌 Attempting TraCI connection on port {port}...")
             traci.init(port)
             self.connected = True
             
             # Get junction and lane IDs
-            self.junction_ids = traci.trafficlight.getIDList()
-            self.lane_ids = traci.lane.getIDList()
+            self.junction_ids = list(traci.trafficlight.getIDList())
+            self.lane_ids = list(traci.lane.getIDList())
             
-            print(f"TraCI connected. Found {len(self.junction_ids)} junctions")
+            print(f"✅ TraCI connected on port {port}. Found {len(self.junction_ids)} junctions")
             return True
             
         except Exception as e:
-            print(f"Error connecting to TraCI: {e}")
+            print(f"❌ Error connecting to TraCI: {e}")
+            import traceback
+            traceback.print_exc()
             return False
     
     def disconnect(self):
-        """Disconnect from TraCI"""
+        """Disconnect from TraCI and fully reset state"""
         try:
-            if self.connected:
+            if self.connected or traci.isLoaded():
+                print("🔌 Disconnecting TraCI...")
                 traci.close()
                 self.connected = False
-                # Reset counters
+                # Reset all state
+                self.junction_ids = []
+                self.lane_ids = []
                 self.total_departed = 0
                 self.total_arrived = 0
-                print("TraCI disconnected")
+                print("✅ TraCI disconnected and state reset")
+            else:
+                print("TraCI was not connected")
         except Exception as e:
-            print(f"Error disconnecting TraCI: {e}")
+            print(f"⚠️ Error disconnecting TraCI (forcing reset): {e}")
+            # Force reset even if close fails
+            self.connected = False
+            self.junction_ids = []
+            self.lane_ids = []
+            self.total_departed = 0
+            self.total_arrived = 0
     
     def get_metrics(self) -> Dict:
         """
