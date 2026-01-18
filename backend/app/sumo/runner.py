@@ -8,6 +8,7 @@ import sys
 import time
 from typing import Optional
 from app.config import settings
+from app.sumo.traci_handler import traci_handler
 
 
 class SUMORunner:
@@ -90,8 +91,6 @@ class SUMORunner:
             import traci
             
             # CRITICAL: Force complete cleanup before starting
-            from app.sumo.traci_handler import traci_handler
-            
             print("🔍 Checking for stale connections...")
             
             # Force handler disconnect if still marked as connected

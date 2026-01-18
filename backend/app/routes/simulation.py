@@ -119,7 +119,17 @@ async def start_simulation(request: SimulationRequest):
     try:
         # Check if already running
         if sumo_runner.is_running:
-            raise HTTPException(status_code=400, detail="Simulation is already running")
+            print("⚠️ Simulation already running - stopping it first...")
+            manager.stop_broadcasting()
+            traci_handler.disconnect()
+            sumo_runner.stop()
+            await asyncio.sleep(1.5)
+        
+        # Ensure websocket is not broadcasting
+        if manager.broadcasting:
+            print("⚠️ WebSocket still broadcasting - stopping...")
+            manager.stop_broadcasting()
+            await asyncio.sleep(0.5)
         
         # Generate demand-based routes for the location
         print(f"📊 Generating traffic demand for {request.location}...")

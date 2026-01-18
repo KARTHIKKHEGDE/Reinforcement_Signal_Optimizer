@@ -122,6 +122,10 @@ class SimulationState:
         if not traci_handler.connected:
             return {"active": False, "vehicle": None, "preemption_active": False, "time_remaining": 0.0}
         
+        # Check if TraCI is actually still loaded
+        if not traci.isLoaded():
+            return {"active": False, "vehicle": None, "preemption_active": False, "time_remaining": 0.0}
+        
         try:
             vehicle_ids = traci.vehicle.getIDList()
             

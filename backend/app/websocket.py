@@ -46,7 +46,12 @@ class ConnectionManager:
     
     async def start_broadcasting(self, mode: str = "fixed", intensity: str = None):
         """Start broadcasting simulation metrics"""
+        if self.broadcasting:
+            print("Already broadcasting")
+            return
+        
         self.broadcasting = True
+        self.error_count = 0  # Reset error counter
         print(f"🚀 Started broadcasting simulation metrics in {mode} mode (intensity: {intensity})")
         
         # Ensure TraCI is connected
@@ -117,12 +122,21 @@ class ConnectionManager:
                     print("🛑 Stopping simulation automatically...")
                     self.broadcasting = False
                     from app.sumo.runner import sumo_runner
+                    traci_handler.disconnect()
                     sumo_runner.stop()
                     break
                 
                 print(f"❌ Error in broadcast loop: {e}")
                 import traceback
                 traceback.print_exc()
+                
+                # If errors continue, stop broadcasting to prevent infinite error loop
+                self.error_count = getattr(self, 'error_count', 0) + 1
+                if self.error_count > 5:
+                    print("❌ Too many errors, stopping broadcast...")
+                    self.broadcasting = False
+                    break
+                
                 await asyncio.sleep(1)
     
     def stop_broadcasting(self):

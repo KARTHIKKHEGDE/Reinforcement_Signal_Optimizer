@@ -67,16 +67,26 @@ class TraCIHandler:
         try:
             if self.connected or traci.isLoaded():
                 print("🔌 Disconnecting TraCI...")
-                traci.close()
+                try:
+                    traci.close()
+                except Exception as close_err:
+                    print(f"   Note: Error during close (may already be closed): {close_err}")
+                
+                # Always reset state, even if close() failed
                 self.connected = False
-                # Reset all state
                 self.junction_ids = []
                 self.lane_ids = []
                 self.total_departed = 0
                 self.total_arrived = 0
                 print("✅ TraCI disconnected and state reset")
             else:
-                print("TraCI was not connected")
+                # Still reset state even if not connected
+                self.connected = False
+                self.junction_ids = []
+                self.lane_ids = []
+                self.total_departed = 0
+                self.total_arrived = 0
+                print("TraCI was not connected, state reset anyway")
         except Exception as e:
             print(f"⚠️ Error disconnecting TraCI (forcing reset): {e}")
             # Force reset even if close fails
@@ -94,6 +104,12 @@ class TraCIHandler:
             dict: Current simulation metrics
         """
         if not self.connected:
+            return self._get_empty_metrics()
+        
+        # Check if TraCI is actually still loaded
+        if not traci.isLoaded():
+            print("⚠️ TraCI not loaded, marking as disconnected")
+            self.connected = False
             return self._get_empty_metrics()
         
         try:
@@ -181,11 +197,20 @@ class TraCIHandler:
             if not self.connected:
                 return False
             
+            # Check if TraCI is actually still loaded
+            if not traci.isLoaded():
+                print("⚠️ TraCI not loaded during step, marking as disconnected")
+                self.connected = False
+                return False
+            
             traci.simulationStep()
             return True
             
         except Exception as e:
             print(f"Error in simulation step: {e}")
+            # Mark as disconnected if connection error
+            if "connection" in str(e).lower() or "closed" in str(e).lower():
+                self.connected = False
             return False
     
     def _get_empty_metrics(self) -> Dict:
