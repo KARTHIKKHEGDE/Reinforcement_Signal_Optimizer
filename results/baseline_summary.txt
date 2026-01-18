@@ -1,0 +1,27 @@
+================================================================================
+FIXED-TIME BASELINE EVALUATION SUMMARY
+================================================================================
+Evaluation Date: 2026-01-18 10:50:08
+Controller Type: Fixed-Time (Webster's Formula)
+Cycle Time: 120s
+Green Splits: [30, 10, 30, 10]
+
+OVERALL PERFORMANCE:
+--------------------------------------------------------------------------------
+  Average Queue Length:  85.15 ± 0.00 vehicles
+  Average Vehicle Delay: 710.96 ± 0.00 seconds
+  Total Throughput:      1319 ± 0 vehicles/hour
+  Queue Imbalance:       22.41 ± 0.00
+  Average Reward:        -3147.841 ± 0.000
+
+PEAK HOUR PERFORMANCE:
+--------------------------------------------------------------------------------
+  Morning Peak (08:00):
+    Avg Queue: 96.19 vehicles
+    Avg Delay: 198.44 seconds
+
+  Evening Peak (18:00):
+    Avg Queue: 110.80 vehicles
+    Avg Delay: 105.63 seconds
+
+================================================================================

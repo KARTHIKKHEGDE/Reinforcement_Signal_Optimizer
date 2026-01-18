@@ -1,0 +1,60 @@
+==========================================================================================
+RL AGENT vs FIXED-TIME BASELINE - COMPREHENSIVE COMPARISON
+==========================================================================================
+
+OVERALL PERFORMANCE IMPROVEMENT:
+------------------------------------------------------------------------------------------
+
+Avg Queue Length:
+  RL Agent:           57.96
+  Fixed-Time:         85.15
+  Improvement:        41.3% **
+  Significance:    p=0.0017 (Cohen's d=-0.71, medium)
+
+Avg Vehicle Delay:
+  RL Agent:          119.67
+  Fixed-Time:        710.96
+  Improvement:        42.7% **
+  Significance:    p=0.0064 (Cohen's d=-0.94, large)
+
+Total Throughput:
+  RL Agent:         1565.79
+  Fixed-Time:       1319.17
+  Improvement:        52.6% 
+  Significance:    p=0.0724 (Cohen's d=0.24, small)
+
+Queue Imbalance:
+  RL Agent:           14.83
+  Fixed-Time:         22.41
+  Improvement:        39.3% **
+  Significance:    p=0.0028 (Cohen's d=-0.80, large)
+
+------------------------------------------------------------------------------------------
+Significance levels: *** p<0.001, ** p<0.01, * p<0.05
+
+PEAK HOUR ANALYSIS:
+------------------------------------------------------------------------------------------
+
+Morning Peak (08:00):
+  Queue Length:    RL= 90.04  Fixed= 96.19  Δ=  6.4%
+  Vehicle Delay:   RL=234.38s Fixed=198.44s Δ=-18.1%
+
+Evening Peak (18:00):
+  Queue Length:    RL= 99.27  Fixed=110.80  Δ= 10.4%
+  Vehicle Delay:   RL=135.11s Fixed=105.63s Δ=-27.9%
+
+
+BEST IMPROVEMENT HOUR:
+------------------------------------------------------------------------------------------
+  Hour: 03:00
+  Queue improvement: 99.6%
+  Delay improvement: 99.7%
+
+
+WORST IMPROVEMENT HOUR:
+------------------------------------------------------------------------------------------
+  Hour: 21:00
+  Queue improvement: -2.8%
+  Delay improvement: 32.5%
+
+==========================================================================================

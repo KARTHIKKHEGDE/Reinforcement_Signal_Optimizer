@@ -52,6 +52,15 @@ class SimulationResponse(BaseModel):
 @router.get("/locations")
 async def get_locations():
     """Get available simulation locations"""
+    global locations_data
+    if not locations_data:
+        try:
+            if os.path.exists(LOCATIONS_FILE):
+                with open(LOCATIONS_FILE, "r") as f:
+                    locations_data = json.load(f)
+                print(f"✅ Reloaded {len(locations_data)} locations from {LOCATIONS_FILE}")
+        except Exception as e:
+            print(f"⚠️ Error reloading locations.json: {e}")
     return locations_data
 
 

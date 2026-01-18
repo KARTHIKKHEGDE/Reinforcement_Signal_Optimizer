@@ -103,6 +103,15 @@ class ConnectionManager:
                 await asyncio.sleep(settings.WS_UPDATE_INTERVAL)
                 
             except Exception as e:
+                error_msg = str(e).lower()
+                if "connection closed" in error_msg or "connection already closed" in error_msg or "fataltracierror" in error_msg:
+                    print(f"❌ SUMO Connection lost: {e}")
+                    print("🛑 Stopping simulation automatically...")
+                    self.broadcasting = False
+                    from app.sumo.runner import sumo_runner
+                    sumo_runner.stop()
+                    break
+                
                 print(f"❌ Error in broadcast loop: {e}")
                 import traceback
                 traceback.print_exc()

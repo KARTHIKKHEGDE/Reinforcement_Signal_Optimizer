@@ -40,8 +40,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 # Our modules
-from src.environment.traffic_env import TrafficEnv
-from src.utils.arrival_rate_converter import get_hourly_rates
+# Our modules
+from environment.traffic_env import TrafficEnv
+from utils.arrival_rate_converter import get_hourly_rates
 
 
 # ============================================

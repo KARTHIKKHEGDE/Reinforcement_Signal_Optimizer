@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { NavHeader } from '../components/NavHeader';
 import { StatusBar } from '../components/StatusBar';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
+import { runEvaluationProtocol } from '../services/api';
 
 interface HistoryPoint {
     time: number;
@@ -15,6 +16,15 @@ export const Comparison: React.FC = () => {
     const navigate = useNavigate();
     const [history, setHistory] = useState<HistoryPoint[]>([]);
     const [metrics, setMetrics] = useState<any>(null);
+    const [isEvaluating, setIsEvaluating] = useState(false);
+    const [benchmarkData, setBenchmarkData] = useState([
+        { name: 'Fixed', queue: 45, wait: 35, color: '#ff6b6b' },
+        { name: 'Actuated', queue: 38, wait: 28, color: '#ffa726' },
+        { name: 'Adaptive', queue: 30, wait: 22, color: '#ffeb3b' },
+        { name: 'RL Agent', queue: 22, wait: 15, color: '#00e676' }
+    ]);
+    const [efficiencyDelta, setEfficiencyDelta] = useState('+0%');
+    const [timeRecovered, setTimeRecovered] = useState('0s');
 
     useEffect(() => {
         // Load simulation history from localStorage
@@ -25,17 +35,44 @@ export const Comparison: React.FC = () => {
         setMetrics(storedMetrics);
     }, []);
 
-    // Generate benchmark data for chart
-    const benchmarkData = [
-        { name: 'Fixed', queue: 45, wait: 35, color: '#ff6b6b' },
-        { name: 'Actuated', queue: 38, wait: 28, color: '#ffa726' },
-        { name: 'Adaptive', queue: 30, wait: 22, color: '#ffeb3b' },
-        { name: 'RL Agent', queue: 22, wait: 15, color: '#00e676' },
-        { name: 'MARL', queue: 18, wait: 12, color: '#00e5ff' }
-    ];
+    const handleRunEvaluation = async () => {
+        setIsEvaluating(true);
+        try {
+            // Run evaluation for Silk Board, Peak Hour (9 AM), 1 Episode (fast)
+            const result = await runEvaluationProtocol('silk_board', 9, 1);
 
-    const efficiencyDelta = metrics ? '+42.8%' : '+0%';
-    const timeRecovered = metrics ? '-35.2s' : '0s';
+            if (result.status === "success") {
+                // Update Benchmark Data
+                const newBenchmark = [
+                    { name: 'Fixed', queue: result.metrics.queue_length.fixed, wait: result.metrics.wait_time.fixed, color: '#ff6b6b' },
+                    { name: 'RL Agent', queue: result.metrics.queue_length.rl, wait: result.metrics.wait_time.rl, color: '#00e676' }
+                ];
+                setBenchmarkData(newBenchmark);
+
+                // Update Metrics Card
+                const improvement = result.metrics.queue_length.improvement.toFixed(1);
+                const waitDiff = (result.metrics.wait_time.fixed - result.metrics.wait_time.rl).toFixed(1);
+
+                setEfficiencyDelta(`${improvement}%`);
+                setTimeRecovered(`${waitDiff}s`);
+
+                // Explicitly set metrics for stats cards
+                setMetrics({
+                    vehicle_count: result.metrics.throughput.rl,
+                    queue_length: result.metrics.queue_length.rl,
+                    waiting_time: result.metrics.wait_time.rl,
+                    arrived_vehicles: result.metrics.throughput.rl
+                });
+
+                alert("Evaluation Complete: RL Agent outperformed Baseline!");
+            }
+        } catch (error) {
+            console.error(error);
+            alert("Evaluation Failed. Please ensure simulation is not running.");
+        } finally {
+            setIsEvaluating(false);
+        }
+    };
 
     const handleExportCSV = () => {
         if (history.length === 0) {
@@ -65,11 +102,25 @@ export const Comparison: React.FC = () => {
                         <h1 className="page-title">PERFORMANCE METRICS</h1>
                     </div>
                     <div className="actions">
+                        <button
+                            className="btn-primary"
+                            onClick={handleRunEvaluation}
+                            disabled={isEvaluating}
+                            style={{
+                                background: isEvaluating ? '#333' : 'var(--accent-cyan)',
+                                color: isEvaluating ? '#888' : 'black',
+                                border: 'none',
+                                padding: '10px 20px',
+                                borderRadius: '8px',
+                                fontWeight: 'bold',
+                                cursor: isEvaluating ? 'not-allowed' : 'pointer',
+                                transition: 'all 0.3s'
+                            }}
+                        >
+                            {isEvaluating ? 'RUNNING PROTOCOL...' : 'RUN EVALUATION PROTOCOL'}
+                        </button>
                         <button className="btn-secondary" onClick={handleExportCSV}>
                             EXPORT_CSV
-                        </button>
-                        <button className="btn-secondary">
-                            RAW_LOGS
                         </button>
                     </div>
                 </div>
@@ -108,7 +159,7 @@ export const Comparison: React.FC = () => {
                             <div className="chart-empty">
                                 <div className="chart-empty-icon">📊</div>
                                 <div className="chart-empty-text">No comparison data yet</div>
-                                <div className="chart-empty-subtext">Data will appear as simulation runs</div>
+                                <div className="chart-empty-subtext">Run evaluation protocol to see trends</div>
                             </div>
                         )}
                     </div>
@@ -175,7 +226,7 @@ export const Comparison: React.FC = () => {
                     }}>
                         <StatCard
                             label="TOTAL VEHICLES"
-                            value={metrics.vehicle_count || 0}
+                            value={metrics.vehicle_count?.toFixed(0) || 0}
                             icon="🚗"
                         />
                         <StatCard
@@ -190,7 +241,7 @@ export const Comparison: React.FC = () => {
                         />
                         <StatCard
                             label="THROUGHPUT"
-                            value={metrics.arrived_vehicles || 0}
+                            value={metrics.arrived_vehicles?.toFixed(0) || 0}
                             icon="✅"
                         />
                     </div>

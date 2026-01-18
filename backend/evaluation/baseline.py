@@ -29,8 +29,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 # Our modules
-from src.environment.traffic_env import TrafficEnv
-from src.utils.arrival_rate_converter import get_hourly_rates
+# Our modules
+from environment.traffic_env import TrafficEnv
+from utils.arrival_rate_converter import get_hourly_rates
 
 
 # ============================================
@@ -454,6 +455,12 @@ def main():
         action="store_true",
         help="Suppress output"
     )
+    parser.add_argument(
+        "--hour",
+        type=int,
+        default=None,
+        help="Evaluate single hour only (0-23)"
+    )
     
     args = parser.parse_args()
     
@@ -470,11 +477,29 @@ def main():
     )
     
     # Run evaluation
-    results_df = evaluator.evaluate_full_day(
-        arrival_rates_csv=args.data,
-        n_episodes_per_hour=args.episodes,
-        output_dir=args.output
-    )
+    if hasattr(args, 'hour') and args.hour is not None:
+        # Single hour evaluation
+        result = evaluator.evaluate_hour(
+            hour=args.hour,
+            arrival_rates_csv=args.data,
+            n_episodes=args.episodes
+        )
+        # Wrap single result in list for DataFrame compatibility
+        results_df = pd.DataFrame([result])
+        output_file = f"{args.output}/baseline_evaluation.csv"
+        # Append if file exists, else write new? For now just overwrite or write single
+        # Ideally we want a separate file or handle it, but compare.py expects this filename
+        # Let's write just this hour to the CSV for comparison
+        os.makedirs(args.output, exist_ok=True)
+        results_df.to_csv(output_file, index=False)
+        print(f"\n📊 Results for Hour {args.hour:02d}:00:")
+        print(f"   Avg Queue: {result['avg_queue_length_mean']:.2f}")
+    else:
+        results_df = evaluator.evaluate_full_day(
+            arrival_rates_csv=args.data,
+            n_episodes_per_hour=args.episodes,
+            output_dir=args.output
+        )
     
     print("\n" + "=" * 80)
     print("✅ BASELINE EVALUATION COMPLETE!")

@@ -1,0 +1,38 @@
+================================================================================
+RL AGENT EVALUATION SUMMARY
+================================================================================
+Evaluation Date: 2026-01-18 10:49:24
+Total Hours Evaluated: 24
+Episodes per Hour: 1
+
+OVERALL PERFORMANCE:
+--------------------------------------------------------------------------------
+  Average Queue Length:  57.96 ± 0.00 vehicles
+  Average Vehicle Delay: 119.67 ± 0.00 seconds
+  Total Throughput:      1566 ± 0 vehicles/hour
+  Queue Imbalance:       14.83 ± 0.00
+  Average Reward:        -2103.663 ± 0.000
+
+PEAK HOUR PERFORMANCE:
+--------------------------------------------------------------------------------
+  Morning Peak (08:00):
+    Avg Queue: 90.04 vehicles
+    Avg Delay: 234.38 seconds
+
+  Evening Peak (18:00):
+    Avg Queue: 99.27 vehicles
+    Avg Delay: 135.11 seconds
+
+BEST PERFORMANCE HOUR:
+--------------------------------------------------------------------------------
+  Hour: 03:00
+  Avg Queue: 0.04 vehicles
+  Avg Delay: 6.17 seconds
+
+WORST PERFORMANCE HOUR:
+--------------------------------------------------------------------------------
+  Hour: 21:00
+  Avg Queue: 101.89 vehicles
+  Avg Delay: 107.28 seconds
+
+================================================================================
